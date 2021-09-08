@@ -1,0 +1,127 @@
+
+
+h1{
+    color: darkgoldenrod;
+    text-align: center;
+    text-decoration-line: underline;
+}
+.c1{
+    color: transparent;
+    background-color: darkgoldenrod;
+    width: 10%;
+    height: 100px;
+    border-style: solid;
+    margin-left: 20%;
+}
+.c2{
+    color: transparent;
+    background-color: #f0ffff;
+    width: 10%;
+    height: 100px;
+    border-style: solid;
+    margin-top: -11%;
+    margin-left: 35%;
+    margin-right: 0%;
+}
+.c3{
+    color: transparent;
+    background-color: rgb(23, 193, 12);
+    width: 10%;
+    height: 100px;
+    border-style: solid;
+    margin-top: -11%;
+    margin-left: 50%;
+    margin-right: 9%;
+}
+.c4{
+    color: transparent;
+    background-color: rgb(195, 233, 24);
+    width: 10%;
+    height: 100px;
+    border-style: solid;
+    margin-left: 20%;
+    margin-top: 5%;
+    margin-right: 9%;
+}
+.c5{
+    color: transparent;
+    background-color: rgb(233 24 111);
+    width: 10%;
+    height: 100px;
+    border-style: solid;
+    margin-left: 35%;
+    margin-top: -11%;
+    margin-right: 9%;
+}
+.c6{
+    color: transparent;
+    background-color: rgb(56 24 233);
+    width: 10%;
+    height: 100px;
+    border-style: solid;
+    margin-left: 50%;
+    margin-top: -11%;
+    margin-right: 9%;
+}
+.c7{
+    color: transparent;
+    background-color: rgb(24 146 233);
+    width: 10%;
+    height: 100px;
+    border-style: solid;
+    margin-left: 64%;
+    margin-top: -11%;
+    margin-right: 9%;
+}
+.c8{
+    color: transparent;
+    background-color: rgb(55 94 122);
+    width: 10%;
+    height: 100px;
+    border-style: solid;
+    margin-left: 20%;
+    margin-top: 5%;
+    margin-right: 9%;
+}
+.c9{
+    color: transparent;
+    background-color: rgb(79 218 141);
+    width: 10%;
+    height: 100px;
+    border-style: solid;
+    margin-left: 35%;
+    margin-top: -11%;
+    margin-right: 9%;
+}
+.c10{
+    color: transparent;
+    background-color: rgb(203 79 218);
+    width: 10%;
+    height: 100px;
+    border-style: solid;
+    margin-left: 50%;
+    margin-top: -11%;
+    margin-right: 9%;
+}
+.c11{
+    
+    color: transparent;
+    background-color: rgb(218 162 79);
+    width: 10%;
+    height: 100px;
+    border-style: solid;
+    margin-left: 64%;
+    margin-top: -11%;
+    margin-right: 9%;
+}
+.c12{
+    
+    color: transparent;
+    background-color: rgb(218 105 79);
+    width: 10%;
+    height: 100px;
+    border-style: solid;
+    margin-left: 78%;
+    margin-top: -11%;
+    margin-right: 9%; 
+}

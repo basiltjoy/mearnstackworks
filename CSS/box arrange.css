@@ -1,0 +1,17 @@
+div{ 
+ border-style: solid;
+height:200px;
+width:40%;
+}
+.lo1{
+    position: absolute;
+    background-color: chartreuse;
+    margin-left: 19.1%;
+    margin-top: 20%;
+}
+.lo2{
+    position: absolute;
+    background-color: rgb(76, 212, 212);
+    margin-top: 41%;
+    margin-left: 19%;
+}

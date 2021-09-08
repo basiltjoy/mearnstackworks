@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
+div{
+    width: 40%;
+    background-color: rgb(105, 142, 241);
+}
+h1{
+    color: brown;
+    border-style: solid;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.f1{
+    color: chartreuse;
+    border-style: solid;
+    border-color: black;
+    font-family: 'Rampart One', cursive;
+}
+.f2{
+    color: #474ae6;
+    border-style: solid;
+    border-color: rgb(233, 6, 6);
+    font-family: 'Klee One', cursive;
+}
+body{
+    background-color: blueviolet;
+    background-image:url(Images/Spectrum..png) ;
+    
+}

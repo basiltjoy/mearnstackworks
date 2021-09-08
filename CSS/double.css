@@ -1,0 +1,19 @@
+.c1{
+    position: relative;
+    border-style: dotted;
+    background-color: cadetblue;
+    height: 319px;
+    width: 268px;
+    margin-left: 41px;
+    margin-top: 22px;
+}
+.c2{
+    border-style: solid;
+    position: absolute;
+    text-align: center;
+    background-color: darkgoldenrod;
+    height: 150px;
+    width: 40%;
+    left: 26%;
+    top: 25%;
+}

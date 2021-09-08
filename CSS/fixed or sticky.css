@@ -1,0 +1,16 @@
+body{
+    background-color: darkseagreen;
+    height: 1400px;
+}
+.fix{
+    color: darkviolet;
+    border-style: solid;
+    height: 50px;
+    width:10%;
+    position: sticky;
+    top: 10%;
+    left: 20%;
+
+    border-color:rgb(5, 3, 4) ;
+    background-color: rgb(230, 203, 203);
+}

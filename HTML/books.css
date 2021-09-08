@@ -1,0 +1,31 @@
+div{
+  position:relative;
+    border-style:solid;
+    border-radius: 100px;
+    width: 10%;
+    height:40%;
+    float:left;
+    margin-left: 5%;
+}
+img{width: 95%;
+  height: 30%;
+}
+.dead{
+  padding: 4%;
+  border-style: solid;
+}
+.Con{
+  padding: 4%;
+  border-style: solid;
+}
+.dream{
+  padding: 4%;
+  width: 14%;
+}
+.moon{
+  padding: 4%;
+    border-style: solid;
+    margin-top: 0%;
+    right: 1%;
+}
+

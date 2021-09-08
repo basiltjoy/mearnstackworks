@@ -1,0 +1,13 @@
+
+a{
+    color: darkblue;
+    font-size: 15px;
+    height: 40px;
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content:space-around;  
+    align-items:center;
+    background-color: rgb(148, 231, 241);
+}

@@ -1,0 +1,38 @@
+.parent{
+    background-color: rgb(75, 140, 236);
+    width: 381px;
+    height: 330px;
+    justify-content:space-evenly;
+    /*justify content used for distributing space
+    within a box*/
+}
+.col{
+    width: 60px;
+    height: 326px;
+    border: 2px blue solid; 
+}
+.col1{
+    position: absolute;
+    left: 32.5%;
+    background-color: #9f55ef;
+}
+.col2{
+    position: absolute;
+    left: 25%;
+    background-color: rgb(32, 230, 98);
+}
+.col3{ 
+    position: absolute;
+    left: 17%;
+    background-color: rgb(157, 42, 233);
+}
+.col4{
+    position: absolute;
+    left: 9%;
+    background-color: rgb(241, 142, 28);
+}
+.col5{
+    position: absolute;
+    left: 1.5%;
+    background-color: rgb(235, 32, 76);
+}
