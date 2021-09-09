@@ -1,0 +1,10 @@
+var name="Basil T Joy";
+var address1="Thadathil";
+var address="Mannathoor";
+const age="24";
+const phone="9497485708";
+console.log(name);
+console.log(address1);
+console.log(address);
+console.log(age);
+console.log(phone);
