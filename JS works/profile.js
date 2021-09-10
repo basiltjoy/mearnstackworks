@@ -1,10 +1,6 @@
-var name="Basil T Joy";
-var address1="Thadathil";
-var address="Mannathoor";
-const age="24";
-const phone="9497485708";
-console.log(name);
-console.log(address1);
-console.log(address);
-console.log(age);
-console.log(phone);
+var p_name="Basil";
+var add="thadathil";
+var add1="mannathoor";
+//console.log(p_name,add,add1);
+
+console.log(`My Profile ${p_name} ${add} ${add1}`); // `-back quote
