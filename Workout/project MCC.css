@@ -1,9 +1,7 @@
 div{
     position: fixed;
     background-color: rgb(248, 203, 203);
-    border-style:inherit;
     width: 35%;
-    height: 380px;
     left: 64%;
     top: 41%;
 }
