@@ -1,4 +1,4 @@
-var num=15; 
+var num=45; 
 if(num%3==0){
     console.log("Fiz");
 }
