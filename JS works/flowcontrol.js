@@ -1,4 +1,4 @@
-var age=25;
+var age=10;
 if(age>=18){
 console.log("you are eligible");
 }
