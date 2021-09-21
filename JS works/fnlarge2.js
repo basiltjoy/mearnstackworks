@@ -10,4 +10,4 @@ function largeAmongTwo(n1,n2){
 
 return n2>n1?n2:n1
 }
-console.log(largeAmongTwo(n1,n2));
+ console.log(largeAmongTwo(n1,n2));
