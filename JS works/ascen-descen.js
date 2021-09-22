@@ -14,7 +14,7 @@ var x = 20, y = 10, z = 30
 
 //Descending
  if ((z > x) & (z > y)) {
-    console.log("30");
+    console.log(z);
  }
  if ((x > y) & (x < z)) {
     console.log("20");
