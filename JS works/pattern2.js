@@ -1,6 +1,6 @@
 for (let row = 1; row <= 1; row++) {
     let str = "";
-    for (let col = 1; col <= 1; col++) { //innerloop works first then second loop 
+    for (let col = 1; col <=1; col++) { //innerloop works first then second loop 
         str += row
     }
     console.log(str);

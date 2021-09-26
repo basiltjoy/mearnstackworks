@@ -28,42 +28,49 @@ var employees = [
 
 //print experience of each employee
 //outliers-non feasible values
-// for(let emp of employees){
-// var experience=emp[5]-emp[4];
-// console.log(emp[1],experience);
-// }
+ for(let emp of employees){
+ var experience=emp[5]-emp[4];
+ console.log(emp[1],experience);
+ }
 
 
 
 //print highest and lowest salary
+// console.log("Above 30,000");
 // for (let emp of employees) {
 //    if (emp[2] > 30000) {
-//        console.log("Above 30,000");
 //        console.log(`${emp[1]} ${emp[2]}`);
 //    }
 // }
+
+// console.log("below 30,000");
 // for (let emp of employees) {
 //    if (emp[2] < 30000) {
-//        console.log("below 30,000/-");
-//        console.log(`${emp[1]} ${emp[2]}`);
+//     console.log(`${emp[1]} ${emp[2]}`);
 //   }
 // }
+
 // another method
+
 //    for (let emp of employees) {
 //    var x = 30000;
 //    if (emp[2] < x) {
-//        console.log("lowest salary=",emp[2]);
-//    }
+//        console.log("lowest salary=",emp[1],emp[2]);
+//   }
 //    if(emp[2]>x){
-//        console.log("Highest salary=",emp[2]);
+//        console.log("Highest salary=",emp[1],emp[2]);
 //    }
-// }
+//  }
 
 
 
 
 //print name of developer taking highest salary
-
+// for (let emp of employees) {
+//    if (emp[3] == "developer") {
+//        console.log((emp[1]+emp[2]));
+//    }
+//                     }
 
 
 
@@ -77,7 +84,7 @@ var employees = [
 //print total sum of salary of developers  //not completed
 // for (let emp of employees) {
 //    if (emp[3] == "developer") {
-//        var x=emp[2];
+//        var x=emp[3,1]+emp[2];
 //        console.log(x);   
 //    } 
 //  }

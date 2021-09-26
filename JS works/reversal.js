@@ -2,9 +2,9 @@ var num = 123;  //get reversal no.321
 var result ="";
 while (num != 0) {
   let digit = num % 10;              
-  //   console.log(digit);  
   result += digit; //to append digit=result("321")
   num = Math.floor(num / 10);
+  
 }
 console.log(result);
 

@@ -1,19 +1,21 @@
- var num=45;
-// if (num % 15 == 0) {
-// console.log("Fizbuz");
-// }
-// else if (num % 5 == 0) {
-// console.log("Fiz");
-// }
-// else if (num % 3 == 0) {
-// console.log("Buz");
-// }
+ var num=15;
+ // if (num % 15 == 0) {
+ // console.log("Fizbuz");
+ // }
+ // else if (num % 5 == 0) {
+ // console.log("Fiz");
+ // }
+ // else if (num % 3 == 0) {
+ // console.log("Buz");
+ // }
 
-  var res=""
-  if(num%3==0){
+   var res=""
+   if(num%3==0){
     res+="Fiz";
-  }
-  if(num%5==0){
+   }
+   if(num%5==0){
     res+="Buz";  //res=fiz+buz
-  }
-  console.log(res);  //res=fizbuz
+   }
+   console.log(res);  //res=fizbuz
+
+ 

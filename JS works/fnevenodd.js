@@ -6,7 +6,7 @@
 // console.log(evenOdd(n1,n2));
     
 //when using ternary operator:
-var num=11;
+var num=13;
  function evenOdd(num){
     return num%2==0?true:false
  }

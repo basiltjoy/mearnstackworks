@@ -1,5 +1,5 @@
 body{
-    background-color:rgb(243, 217, 208);
+    background-color:rgb(250, 247, 246);
 }
 h1{
     color: green;
@@ -8,22 +8,64 @@ h1{
 button:hover{
     background-color: rgb(174, 230, 91);
     font-family:fantasy; 
+
 }
 div{
     border-style: solid;
+    margin-left: 1%;
 }
 textarea{
-    border:double black ;
+    border: thin;
     background-color: rgb(146, 180, 245);
+    
 }
 .d1{
     background-color: burlywood;
 }
 .d2{
     background-color: rgb(236, 233, 60);
+    margin-top: 1%;
 }
 .a1{
     border-style: solid;
-    color: black;
+    color: rgb(139, 3, 3);
     background-color: rgb(252, 252, 252);
 }
+#leftmenuinnerinner {
+    height: 149.6%;
+    width: 14%;
+    margin-top: -230%;
+    overflow-y:hidden; 
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-style:none;
+    background-color: rgb(112, 182, 112);
+}
+
+#prg{
+    margin-left: 14%;
+    margin-top: -1%;
+    border-style: solid;
+}
+
+#divp{
+margin-top: 1%;
+border-style:none;
+}
+
+#ss{
+    text-decoration: none;
+    color: rgb(255, 229, 112);   
+}
+
+#w3login{
+    border-style: inherit;
+    background-color: khaki;
+    margin-top: 40px;
+    width: 55%;
+    margin-left: 16%;
+
+}
+
+
+

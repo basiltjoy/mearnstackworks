@@ -8,7 +8,7 @@
 for (let row = 1; row <= 3; row++) {
     let str = "";
     for (let col = 1; col <= 3; col++) { //innerloop works first then second loop 
-        str+=row
+        str+=row //str=str+row
      }
      console.log(str);
 }

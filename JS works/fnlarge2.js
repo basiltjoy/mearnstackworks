@@ -1,5 +1,5 @@
 var n1=30;
-var n2=20;
+var n2=50;
 function largeAmongTwo(n1,n2){
 // if(n1>n2){
 //   return n1

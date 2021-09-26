@@ -1,6 +1,6 @@
 var arr1 = [9, 4, 10, 8, 5, 20, 15, 30]
 var x=2;
-var arr2 = [2,3,5];
+// var arr2 = [2,3,5];
 // arr1.sort((num1, num2) => (num1 - num2))
 for (let num of arr1) {
     for (let i = 0; i < arr1.length; i++) {
