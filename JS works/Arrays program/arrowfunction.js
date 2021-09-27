@@ -37,7 +37,7 @@
 // console.log(largestAmongTwo(200,100));
 
 
-var arr = [2, 3, 4, 5, 6]
+// var arr = [2, 3, 4, 5, 6]
 //print squares of array elements
 // var squares=(num)=>num**2
 // var res=arr.map((num)=>num**2) 

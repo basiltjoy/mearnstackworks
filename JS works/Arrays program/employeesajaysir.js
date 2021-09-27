@@ -6,7 +6,7 @@ var employees = [
     [1004, "ajesh", 35000, "mrkt", 1991, 2010],
     [1005, "tom", 40000, "ba", 1990, 2015],
     [1006, "jack", 7000, "ba", 2001, 2010],
-    [1007, "jack", 50000, "ba", 2001, 2010],
+    [1007, "nevin", 50000, "ba", 2001, 2010],
 ]
 
 
@@ -31,11 +31,59 @@ var employees = [
 
 
 //print name of developer taking highest salary
-
+// var employee=employees.filter(emp=>emp[3]=="developer").map(emp=>emp[2],emp[1])
+// console.log(employee);
 
 
 
 //print employee names using array method
- var employes=employees.map((emp)=>emp[1])
+// var employes=employees.map((emp)=>emp[1])
 // console.log(employes);
+
+
+//print array method combination-filter & map
+// var developer=employees.filter(emp=>emp[3]=="developer").map(emp=>emp[1]emp[2])
+// console.log(developer);
+
+
+//employees of ba
+// var analyst=employees.filter(emp=>emp[3]=="ba")
+// console.log(analyst);
+
+
+
+//ba employees
+// var ba=employees.filter(emp=>emp[3]=="ba").map(emp=>emp[1])
+// console.log(ba);
+
+
+//give bonus for developers
+// var bonus=employees.filter(emp=>emp[3]=="developer").map(emp=>emp[2]+5000)
+// console.log(bonus);
+
+
+//print deeveloper names and experience
+// var developer = employees.filter(emp => (emp[3] == "developer") & ((emp[5] - emp[4]) > 6)).map(emp=>emp[1])
+// console.log(developer);
+
+
+//sort emp wrt experience in ascen &  desc
+// var emp=employees.sort((emp1,emp2)=>(emp2[5]-emp1[5]))
+// console.log(emp);
+
+
+
+//sort emp wrt sal
+// var emp=employees.sort((emp1,emp2)=>emp2[2]-emp1[2])
+// console.log(emp);
+
+
+
+//sort developers wrt sal
+var emp=employees.filter(emp=>emp[3]=="developer").sort((emp1,emp2)=>emp2[2]-emp1[2])
+console.log(emp);
+
+
+
+
 

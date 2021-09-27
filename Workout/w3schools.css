@@ -59,11 +59,14 @@ border-style:none;
 }
 
 #w3login{
-    border-style: inherit;
-    background-color: khaki;
+    border: 1px solid;
+    border-color: rgb(97, 97, 97);
+    border-radius: 5%;
+    background-color: rgb(255, 255, 255);
     margin-top: 40px;
-    width: 55%;
-    margin-left: 16%;
+    width: 60%;
+    height: 320px;
+    margin-left: 19%;
 
 }
 
