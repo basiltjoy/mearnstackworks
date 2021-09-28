@@ -68,7 +68,7 @@ var employees = [
 
 
 //sort emp wrt experience in ascen &  desc
-// var emp=employees.sort((emp1,emp2)=>(emp2[5]-emp1[5]))
+// var emp=employees.sort((emp1,emp2)=>(emp2[5]-emp2[4])-(emp1[5]-emp1[4]))
 // console.log(emp);
 
 
@@ -80,8 +80,8 @@ var employees = [
 
 
 //sort developers wrt sal
-var emp=employees.filter(emp=>emp[3]=="developer").sort((emp1,emp2)=>emp2[2]-emp1[2])
-console.log(emp);
+// var emp=employees.filter(emp=>emp[3]=="developer").sort((emp1,emp2)=>emp2[2]-emp1[2])
+// console.log(emp);
 
 
 
