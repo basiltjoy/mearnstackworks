@@ -4,13 +4,23 @@ var employee={id:1000,emp_name:"ram",desg_name:"developer",sal:25000}
 
 
 //update salary
-employee["sal"]=50000;
-console.log(employee);
-
+// employee["sal"]=50000;
+// console.log(employee);
 
 //check for gender key present/not
-console.log("gender"in employee);
+// console.log("gender"in employee);
+
 
 //add key gender
-employee["gender"]="Male";
-console.log(employee);
+// employee["gender"]="Male";
+// console.log(employee);
+
+//check and add gender key if its not there
+// if("gender" in employee){
+//    console.log("emp");
+// }
+// else{
+//    console.log(employee.gender="Female");
+// }
+
+
