@@ -21,3 +21,21 @@ var students = [
 // var stud=students.filter(student=>student[4]=="a+") //.map((student)=>student[1])
 // console.log(stud.length);
 // console.log(stud);
+
+//find if any stud received grade d
+// var stud=students.filter(student=>student[4]=="b+")
+// console.log(stud);
+
+//sort student wrt score
+// var mark=students.sort((s1,s2)=>s2[5]-s1[5]);
+// console.log(mark);
+
+
+//find a student
+// var name=students.find(stud=>(stud[1]="jordy"))
+// console.log(name);
+
+//bca students
+var stud=students.filter(student=>student[2]=="BCA")
+console.log(stud);
+

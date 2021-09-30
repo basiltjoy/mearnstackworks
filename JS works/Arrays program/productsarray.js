@@ -51,8 +51,8 @@ var products = [
 
 
 //sort based on price
-// products.sort((item1,item2)=>item2[2]-item1[2])
-// console.log(products);
+ products.sort((item1,item2)=>item2[2]-item1[2])
+ console.log(products);
 
 //offer 5rs off for stock >50
 // var items=products.filter(product=>product[3]>50).map(product=>[product[2]-5,product[1]])
@@ -107,3 +107,4 @@ var products = [
 //forEach method
 // products.filter(product=>product[2]>30).forEach(product=>console.log(product))
 // products.map(product=>product[1]).forEach(product=>console.log(product));
+
