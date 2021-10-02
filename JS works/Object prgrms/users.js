@@ -207,7 +207,7 @@ var users = [
     }
   },
   {
-    "id": 10,
+     "id": 10,
     "name": "Clementina DuBuque",
     "username": "Moriah.Stanton",
     "email": "Rey.Padberg@karina.biz",
@@ -232,6 +232,6 @@ var users = [
 ]
 
 //print username and email id
-var u=users.map((user)=>user.name)
-var v=users.map((user)=>user.email)
-console.log(u,v);
+ var u=users.map((user)=>user.name)
+ var v=users.map((user)=>user.email)
+ console.log(u,v);

@@ -12,7 +12,7 @@ var employee={id:1000,emp_name:"ram",desg_name:"developer",sal:25000}
 
 
 //add key gender
-// employee["gender"]="Male";
+// employee.gender="Female";
 // console.log(employee);
 
 //check and add gender key if its not there
