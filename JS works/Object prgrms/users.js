@@ -232,6 +232,9 @@ var users = [
 ]
 
 //print username and email id
- var u=users.map((user)=>user.name)
- var v=users.map((user)=>user.email)
- console.log(u,v);
+// var u=users.map((user)=>user.name)
+// var v=users.map((user)=>user.email)
+// console.log(u,v);
+
+//prnt zipcode and geo info
+ users.map((user)=>user.address).forEach(user=>console.log(user.zipcode,user.geo));

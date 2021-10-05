@@ -15,7 +15,7 @@ var weather_data = [
     { district: "tvm", temp: 40 },
 ]
 
-var forecast = {};
+var forecast=[]
 for (let data of weather_data) {
     let dist_name = data.district;
     let cur_temp = data.temp;
@@ -31,4 +31,6 @@ for (let data of weather_data) {
 }
 console.log(forecast);
 
-
+//sort forecast wrt temp
+Object.entries(forecast).sort((temp1,temp2)=>temp2[1]-temp1[1]).forEach((temp)=>console.log(temp)); 
+//Object.entries( ) used to convert objects into array so that array methods can be applied

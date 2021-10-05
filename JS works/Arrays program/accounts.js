@@ -33,4 +33,4 @@ var accounts = [
 
 // print details of users with acc_type as savings anad balance > 25000
 // var acc = accounts.filter(account => account[2] == "savings" & account[3] > 25000)
-// console.log(acc);
+// console.log(acc);`````
