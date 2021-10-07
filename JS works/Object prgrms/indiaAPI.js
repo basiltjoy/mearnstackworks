@@ -90,3 +90,14 @@ var countries=[
         "independent": true
     }
 ]
+//print name and population
+console.log(countries[0].name,"population:",countries[0].population);
+
+//prnt currency name and symbol
+console.log("Currency info:-");
+console.log(countries[0].currencies[0].name, countries[0].currencies[0].symbol)
+
+//prnt languages inindia
+var x=countries[0].languages[0].name
+console.log(x);
+

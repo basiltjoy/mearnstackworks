@@ -11,7 +11,7 @@ var students = [
     [110, "greena", "Bsc", 5500,"b+",600],
     [111, "vishnu", "Bsc", 5500,"a",900],
     [112, "athira", "BCA", 50000,"a+",1100],
-    [113, "ravi", "B.com-CA", 40000,"d",800,"yes"]
+    [113, "ravi", "B.com-CA", 40000,"d",800]
 ]
 
 
@@ -41,6 +41,6 @@ var students = [
 // console.log(stud);
 
 //if bsc studs in the list
-// var stud=students.some(student=>student[2]=="Bsc")
-// console.log(stud);
+ var stud=students.some(student=>student[2]=="Bsc")
+ console.log(stud);
     
