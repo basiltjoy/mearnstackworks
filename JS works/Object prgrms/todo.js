@@ -1194,8 +1194,16 @@ var to = [
         "completed": false
     }
 ]
-// var z=to.filter((list)=>list.completed= true)
-// console.log(z);
+
+//prnt tasks of a certain user id
+// var y=to.filter((list)=>list.userId==1)
+// console.log(`Total tasks:${y.length}`);
+
+//prnt completed tasks of a certain userId
+// var y=to.filter((list)=>list.userId==1).filter((list) => list.completed == true)
+// console.log(`Comleted Tasks :${y.length}`);
+
+
 
 ////////////////////////////////////////////////////////
 var todo = [{
@@ -1271,17 +1279,25 @@ var todo = [{
     "completed": false
 }
 ]
-//prnt completed tasks
- var x = todo.filter((list) => [list.completed = true])
- console.log(x);
+
+
+//prnt tasks of a certain user id
+// var y=todo.filter((list)=>list.userId==1)
+// console.log(`Total tasks:${y.length}`);
+
+//prnt completed tasks of a certain userId
+// var y=todo.filter((list)=>list.userId==3).filter((list) => list.completed == true)
+// console.log(`Comleted Tasks :${y.length}`);
 
 
 
-// let counter=0;                 //workout
-//for(const obj of todo){
-//    if(todo.completed== true) 
+//total no of tasks
+// let counter=0; 
+// for(task in todo){ 
 //    counter++;
 // }
 // console.log(counter);
 
-
+//prnt completed tasks
+// var x = todo.filter((list) => list.completed == true)
+// console.log(x.length);

@@ -337,7 +337,7 @@ var countries = [
 ////////////////////////////////
 
 //sajay sir:- country name with currency symbol
- console.log([countries[0].currencies.USD.symbol,  countries[0].name.common]);
+// console.log([countries[0].currencies.USD.symbol,  countries[0].name.common]);
 
 //country name
 // console.log(countries[0].name.common); 

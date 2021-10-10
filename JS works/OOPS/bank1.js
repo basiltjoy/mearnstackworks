@@ -28,7 +28,7 @@ class Bank {
                 ]
         },
         1004: {
-            acno: 1001, password: "userone", balance: 9000,
+            acno: 1004, password: "userfour", balance: 9000,
             transactions:
                 [
                     { to: 1001, amount: 500 },
@@ -37,48 +37,73 @@ class Bank {
                 ]
         },
     }
-
     getAccountDetails() {
         return this.accounts
     }
-
-    authenticate(accno, password) {
-
-        // validate account number
-        if (accno in this.accounts) {
-
-            let pwd = this.accounts[accno].password;
+    Authenticate(acno, password) {
+        if (acno in this.accounts) {
+            let pwd = this.accounts[acno].password
             if (pwd == password) {
-                this.session["user"] = accno
-                // session={"user":1001}
-                console.log(this.session);
-                return 1;
-                //login success
+                this.session["user"] = acno   //adding the login'd accnt to session
+                console.log("login success");
+
             }
             else {
-                return 0;
-                //invalid password
-            }
-            pwd == password ? 1 : 0
+                console.log("invalid password");
 
+            }
         }
         else {
-            return -1;
-            //-1 for invalid account number
+            console.log("invalid ac.no");
         }
-
     }
-
-    balanceEnquiry() {
-
-        //session{"user":1001}
+    BalanceEnquiry(acno) {
         let balance = this.accounts[this.session["user"]].balance
-        console.log(balance);
+        console.log(`User ac: ${this.session["user"]} balance: ${balance}`);
+    }
+    DebitTransfer(amount) {
+        let fund = this.accounts[this.session["user"]].balance
+        if (fund > amount) {
+            let x = fund - amount
+            console.log(`${amount} debited from user account:${this.session["user"]} available balance: ${x}`);
+        }
+        else {
+            console.log("Insufficient Funds");
+        }
+    }
+    CreditTransactions(to_acno, amount) {
+       let from_acc=this.accounts[this.session["user"]].balance
+       this.accounts[to_acno].balance+=amount
+       console.log(`${this.accounts[to_acno].acno} is credited with ${amount}`);
+       console.log(`available balance in ${this.accounts[to_acno].acno} is ${this.accounts[to_acno].balance} `);
+    }
+    paymentHistory(){
+        let user=this.session["user"]
+        console.log("User Debit Transaction");
+        console.log(this.accounts[user].transactions);
+    }
+    CreditTransfers(acno){
+       
+                     //pending
 
     }
-
 }
 
+console.log();
 var obj = new Bank()
-var user = obj.authenticate(1002, "usertwo")
-obj.balanceEnquiry()
+ obj.Authenticate(1001, "userone")
+ obj.BalanceEnquiry()
+ obj.DebitTransfer(100)
+ obj.CreditTransactions(1001,100)
+ obj.paymentHistory()
+ obj.CreditTransfers()
+
+
+
+
+
+
+
+
+
+

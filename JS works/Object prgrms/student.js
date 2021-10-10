@@ -37,7 +37,7 @@ var student = {
 // console.log(student);
 
 // using for loop in objects:  for(keyvariable in objectname)
-// for(let key in student){
-//    console.log(key);  // to print all the key in object
-//    console.log(student[key]);  // to print all the key&values in object
-// }
+ for(let key in student){
+    console.log(key);  // to print all the key in object
+   console.log(student[key]);  // to print all the key&values in object/ 
+}

@@ -1,27 +1,26 @@
-class bank {
-    createAccount(p_name, acno, ac_type, min_bal) {
-        this.p_name = p_name,
-            this.acno = acno,
-            this.ac_type = ac_type,
-            this.balance = min_bal
+class Bank {
+    Account(ac_name, ac_no, ac_type, ac_balance) {
+        this.ac_name = ac_name;
+        this.ac_no = ac_no;
+        this.ac_type = ac_type;
+        this.ac_balance = ac_balance;
     }
     deposit(amount) {
-        this.balance += amount
-        console.log(`your account ${this.acno} is credited with ${amount} and your balance is ${this.balance}`);
+        this.ac_balance += amount
+        console.log(`your account ${this.ac_no} has been credited with ${amount} and your ac.balance:${this.ac_balance}`);
     }
     withdraw(amount) {
-        if (this.balance > amount) {
-            this.balance -= amount
-            console.log("Transaction success");
+        if(this.ac_balance>=amount){
+            this.ac_balance-=amount
+            console.log(`your account ${this.ac_no} has been debited with ${amount} and ac.balance:${this.ac_balance} `);
         }
-        else {
-            console.log("Transaction failed");
+        else{
+            console.log(`insufficient Fund in ${this.ac_no}`);
         }
-
-    }
+    } 
 }
-var obj1 =new bank();
-obj1.createAccount("akhil",1022,"savings",4500)
-obj1.withdraw(1000)
-obj1.deposit(3000)
-console.log(obj1);
+var obj1=new Bank();                          //initialising object                      
+obj1.Account("Amal",1002,"savings",9000)     //creating accnt details
+obj1.deposit(1000)
+obj1.withdraw(10000)
+ console.log(obj1);
