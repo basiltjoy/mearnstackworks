@@ -21,18 +21,12 @@ var bill_details = [
      let paymnt = bill.payment_type;
      if (date in bill_data) {
          bill_data[date] += sales
- 
      }
    else {
          bill_data[date] = sales;
- 
      }
  }
 // console.log(bill_data);
 
 //sort date wrt payment
 
-    
-
-
-  

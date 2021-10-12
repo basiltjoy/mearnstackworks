@@ -71,32 +71,48 @@ class Bank {
             console.log("Insufficient Funds");
         }
     }
-    CreditTransactions(to_acno, amount) {
-       let from_acc=this.accounts[this.session["user"]].balance
-       this.accounts[to_acno].balance+=amount
-       console.log(`${this.accounts[to_acno].acno} is credited with ${amount}`);
-       console.log(`available balance in ${this.accounts[to_acno].acno} is ${this.accounts[to_acno].balance} `);
+    CreditTransfer(to_acno, amount) {
+        let from_acc = this.accounts[this.session["user"]].balance
+        this.accounts[to_acno].balance += amount
+        console.log(`${this.accounts[to_acno].acno} is credited with ${amount}`);
+        console.log(`available balance in ${this.accounts[to_acno].acno} is ${this.accounts[to_acno].balance} `);
     }
-    paymentHistory(){
-        let user=this.session["user"]
-        console.log("User Debit Transaction");
+    paymentHistory() {
+        let user = this.session["user"]
+        console.log("User Payment-Debit Transactions");
         console.log(this.accounts[user].transactions);
     }
-    CreditTransfers(acno){
-       
-                     //pending
-
+    getTransactions() {
+        let transaction_history = [];
+        for (let account in this.accounts) {
+            transaction_history.push(this.accounts[account].transactions)
+        }
+        console.log("Debit Statement of Accounts", transaction_history);
+    }
+    CreditTransactions() {                                                  //incomplete
+        let transactions = this.getTransactions()
+       for (let trans of this.transactions) {
+            for (let tran of trans) {
+                if (tran.to == this.session["user"]) {
+                    console.log(tran);
+                }
+            }
+        }
     }
 }
 
-console.log();
+
+
+
 var obj = new Bank()
- obj.Authenticate(1001, "userone")
- obj.BalanceEnquiry()
- obj.DebitTransfer(100)
- obj.CreditTransactions(1001,100)
- obj.paymentHistory()
- obj.CreditTransfers()
+obj.Authenticate(1002, "usertwo")
+obj.BalanceEnquiry()
+obj.DebitTransfer(100)
+obj.CreditTransfer(1003, 100)
+obj.paymentHistory()
+obj.getTransactions()
+obj.CreditTransactions()
+
 
 
 
