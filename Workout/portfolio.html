@@ -14,17 +14,13 @@
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/f4f16d2e68.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            height: 1600px;
-        }
-    </style>
+    <link rel="stylesheet" href="./portfolio.css">
 
 </head>
 
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-primary bg-info">
+    <nav class="navbar navbar-expand-md navbar-primary bg-info" id="port">
         <div class="container-fluid">
             <a class="navbar-brand fs-1 text-lg" href="#">Portfolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -34,10 +30,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav px-5">
                     <li class="nav-item">
-                        <a class="nav-link fs-5 text-white btn btn-outline-primary px-4 ms-5" href="#aboutme">About</a>
+                        <a class="nav-link2 fs-5 text-white btn btn-outline-primary px-3 ms-2 " href="#aboutme">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#skills" class="nav-link fs-5 text-white btn btn-outline-primary px-4 ms-2">Skills</a>
+                        <a href="#skills" class="nav-link1 fs-5 text-white btn btn-outline-primary px-4 ms-2 text-wrap">Tech Stack</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fs-5 text-white text-wrap btn btn-outline-primary px-3 ms-2" href="#edu"
@@ -50,15 +46,12 @@
                     </li>
                     <li class="nav-item">
                         <a href="#contact"
-                            class="nav-link fs-5 text-white btn btn-outline-primary px-4 ms-2">Contact</a>
+                            class="nav-link1 fs-5 text-white btn btn-outline-primary px-4 ms-2">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-  
-
 
 
 
@@ -75,7 +68,7 @@
                 </h6>
                 <ul style="display: flex; margin-left: 2%; ">
                     <h5><i class="fas fa-user-alt fs-5 px-3 text-white"></i>Basil T Joy</h5>
-                    <h5><i class="fas fa-birthday-cake fs-5 px-4 text-white"></i>05/12/1996</h5>
+                    <h5><i class="fas fa-birthday-cake fs-5 px-4 text-white "></i>05/12/1996</h5>
                 </ul>
                 <ul style="display: flex; margin-left: 2%; ">
                     <h5><i class="fas fa-user-graduate fs-5 px-3 text-white"></i>BCA</h5>
@@ -97,8 +90,15 @@
     </nav>
 
 
+
+    <div id=backtotop>
+        <a href="#port"><i class="far fa fa-3x fa-arrow-alt-circle-up image"></i></a>
+    </div>
+
+
+
     <div style="margin-top: 5%; margin-left: 1%;">
-        <h1 id="skills" style="font-size: 50px; color: rgb(7, 108, 167);">Technology Stack</h1>
+        <h1 id="skills">Technology Stack</h1>
         <div class="container-fluid">
 
             <h3>HTML</h3>
@@ -129,7 +129,7 @@
 
 
     <div style="margin-top: 5%; margin-left: 1%;">
-        <h1 id="edu" style="font-size: 50px; color: rgb(7, 108, 167);">Educational Qualifications</h1>
+        <h1 id="edu">Educational Qualifications</h1>
         <ul>
             <li><i class="fas fa-1x fa-user-graduate fw-bold fs-5"> Bachelor of Computer Application</i>
                 <p class="fw-bold px-4 ">Mahatma Gandhi University <i class="fas fa-grip-lines-vertical"> 2015 -
@@ -140,19 +140,20 @@
     </div>
 
 
+
     <div style="margin-top: 5%; margin-left: 1%;">
-        <h1 id="experience" style="font-size: 50px; color: rgb(7, 108, 167);">Professional experience</h1>
+        <h1 id="experience">Professional experience</h1>
         <ul>
             <li><i class="fas fa-1x fa-user-tie fw-bold fs-5"> Data Analyst</i>
                 <p class="fw-bold px-4">Dentcare Dental Lab pvt ltd <i class="fas fa-grip-lines-vertical fw-bold">
                         2019 - 2021</i>
                 </p>
-                <dl>&#8594; Monitor and reviewed the quality of data</dl>
+                <dl>&#8594; Monitor and review the quality of data</dl>
                 <dl>&#8594; Identify the root cause of data issues and resolve them</dl>
                 <dl>&#8594; Undertake preprocessing of structured and unstructured data</dl>
                 <dl>&#8594; Present information using data visualization techniques</dl>
-                <dl>&#8594; Analyzed large amount of information to discover trends and patterns</dl>
-                <dl>&#8594; Performed diagnostic analytics, product sales analytics </dl>
+                <dl>&#8594; Analyze large amount of information to discover trends and patterns</dl>
+                <dl>&#8594; Perform diagnostic analytics, product sales analytics </dl>
             </li>
             <li>
                 <i class="fas fa-1x fa-user-tie fw-bold fs-5"> Administrative associate</i>
@@ -161,55 +162,32 @@
                 </p>
                 <dl>&#8594; Advanced administrative support to marketing executives</dl>
                 <dl>&#8594; Monitor the sales activities</dl>
-                <dl>&#8594; Arranged special events for sales promotion</dl>
-                <dl>&#8594; Implemented and planned strategies to ensure that the sales stayed in line with
+                <dl>&#8594; Arrange special events for sales promotion</dl>
+                <dl>&#8594; Implement and plan strategies to ensure that the sales stayed in line with
                     the given proposals</dl>
-                <dl>&#8594; Managed meetings, appointments and travel arrangements</dl>
+                <dl>&#8594; Manage meetings, appointments and travel arrangements</dl>
             </li>
         </ul>
     </div>
 
 
-    <div id="contact" style="margin-top: 5%; background-color: rgb(32, 32, 32);">
+
+    <div id="contact">
         <h1 style="text-align: center; color: rgb(247, 225, 101);">Contact Details</h1>
 
         <label for="name" style="color: rgb(245, 241, 236);">Name: Basil T Joy</label>
         <br>
         <label for="mail" style="color: rgb(245, 241, 236);">Email: basiltjoy96@gmail.com</label>
         <br>
-        <textarea name="address" style="margin-top: 1%; background-color: rgb(70, 94, 97); font-weight: 700;"
-            id="address" cols="30" rows="7">
-Address
+        <textarea name="address" id="address" cols="30" rows="7">
+Address:
 
- Thadathil House
- Mannathoor P.O
- Mannathoor
- kochi,kerala
+Thadathil House
+Mannathoor P.O
+Mannathoor
+kochi,kerala
         </textarea>
-
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

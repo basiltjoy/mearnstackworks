@@ -1,0 +1,47 @@
+body {
+    height: 1600px;
+}
+
+#backtotop{
+    margin-left: 93%;
+    position: fixed;
+}
+
+.image{
+    color: rgb(227, 120, 241);
+}
+
+#contact{
+    background-color: rgb(32, 32, 32);
+    margin-top: 5%;
+}
+
+#address{
+    background-color: rgb(70, 94, 97);
+    margin-top: 1%;  
+    font-weight: 700;
+}
+
+#skills{
+    font-size: 50px; 
+    color: rgb(7, 108, 167);
+}
+
+#experience{
+    font-size: 50px; 
+    color: rgb(7, 108, 167);
+}
+
+#edu{
+    font-size: 50px; 
+    color: rgb(7, 108, 167);
+}
+
+.nav-link1{
+   margin-top: 10%;
+}
+
+.nav-link2{
+    margin-top: 15%;
+}
+
