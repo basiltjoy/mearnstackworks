@@ -111,7 +111,7 @@ obj.DebitTransfer(100)
 obj.CreditTransfer(1003, 100)
 obj.paymentHistory()
 obj.getTransactions()
-obj.CreditTransactions()
+// obj.CreditTransactions()
 
 
 

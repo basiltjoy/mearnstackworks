@@ -7,6 +7,6 @@
 
 
 
-to check if an elmnt in set
+// to check if an elmnt in set
  console.log(st. has(10) );
 

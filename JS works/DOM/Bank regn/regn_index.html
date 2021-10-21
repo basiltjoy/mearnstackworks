@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Regn</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Bank Account Registration</h1>
+    <fieldset>
+        <h1>Personal Information</h1>
+        <form action="">
+            <label for="name">Name</label>
+            <input type="text" id="nname" class="form-control">
+            <br> <br>
+            <label for="Pnumber">Phone Number</label>
+            <input type="text" id="Pnumber" class="form-control">
+            <br> <br>
+            <label for="DOB">Date of Birth</label>
+            <input type="date" id="DOB">
+            <h2>Residential Address</h2>
+            <label for="address1">Street address</label>
+            <input type="text" id="address1">
+            <label for="address2">Street address Line2</label>
+            <input type="text" id="address2">
+            <br><br>
+            <label for="city">City</label>
+            <input type="text" id="city">
+            <br><br>
+            <label for="Pcode">Postal Code</label>
+            <input type="text" id="Pcode">
+            <br><br>
+            <p>By signing this form, I acknowledge that the information I've given in this form is accurate and I agree
+                all the terms and conditions.</p>
+            <label for="signing" class="sign">Sign-in</label> <input type="radio" id="signing">
+
+            <button class="btn btn-outline-primary" onclick="bank.regAccount()">Submit</button>
+        </form>
+    </fieldset>
+
+
+</body>
+<script src="./script.js"></script>
+
+</html>

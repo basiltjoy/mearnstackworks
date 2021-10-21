@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(225, 174, 243);
+
+}
+
+div{   
+    border-style: solid;
+    width: 30%;
+    height: 190px;
+    position: relative;
+}
+
+#fname{
+    margin-top: 3ch;
+    margin-left: 19%;
+}
+
+#acno{
+    margin-top: 3ch;
+    margin-left: 4%;
+}
+
+#password{
+    margin-top: 3ch;
+    margin-left: 11%;
+}
+
+button{
+    margin-top: 3ch;
+    margin-left: 20%;
+}
+

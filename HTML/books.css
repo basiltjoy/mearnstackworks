@@ -1,8 +1,8 @@
 div{
-  position:relative;
+ position:relative; 
     border-style:solid;
     border-radius: 100px;
-    width: 10%;
+     width: 10%;  
     height:40%;
     float:left;
     margin-left: 5%;
