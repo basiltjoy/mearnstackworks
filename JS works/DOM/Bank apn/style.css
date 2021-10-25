@@ -4,6 +4,8 @@ body{
 }
 
 div{   
+    margin-top: 9ch;
+    margin-left: 24%;
     border-style: solid;
     width: 30%;
     height: 190px;
@@ -29,4 +31,42 @@ button{
     margin-top: 3ch;
     margin-left: 20%;
 }
+
+/*login1 page*/
+.Container1{
+    margin-top: 9ch;
+    margin-left: 24%;
+    width: 44%;
+    height: 250px;
+}
+
+h1{
+   color: rgb(6, 6, 15);
+   text-align: center;
+   text-transform:uppercase;
+}
+
+input{
+    width: 60%;
+}
+
+#password1{
+    margin-top: 5%;
+    margin-left: 7%;
+}
+
+#acno1{
+margin-left: 2%;
+}
+
+.button1{
+    margin-top: 8%;
+    margin-left: 28%;
+}
+
+#label{
+    margin-left: 7%;
+}
+
+
 

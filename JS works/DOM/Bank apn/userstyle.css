@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(177, 202, 248);
+    height: 1500px;
+}
+
+.navbar{
+   margin-top: 3%;
+}
+
+.nav-item1{
+    margin-left: 125%;
+}
+
+.nav-item2{
+    margin-left: 10%;
+}
+
+.nav-item3{
+    margin-left: 7%; 
+}
+
+.container{
+    display: flex;
+    margin-left: 65%;
+    font: x-large bold;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
