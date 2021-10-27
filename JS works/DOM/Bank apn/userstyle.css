@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(177, 202, 248);
+    background-color: rgb(153, 240, 245);
     height: 1500px;
 }
 
@@ -8,7 +8,7 @@ body {
 }
 
 .nav-item1{
-    margin-left: 125%;
+    margin-left: 35%;
 }
 
 .nav-item2{
@@ -16,7 +16,12 @@ body {
 }
 
 .nav-item3{
-    margin-left: 7%; 
+    margin-left: 10%;
+    margin-top: 4%;
+}
+
+.nav-item4{
+    margin-left: 10%;
 }
 
 .container{

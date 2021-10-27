@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,24 @@
     <title>Account Login</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-<div class="Container">
-    <label for="name">Name</label>
-    <input type="text" id="fname" placeholder="acnt holder name">
-    <br>
-    <label for="acno" >Acc Number</label>
-    <input type="text" id="acno" placeholder="account number">
-    <br>
-    <label for="password">Password</label>
-    <input type="password" id="password" placeholder="password">
-    <br>
-    <button class="btn btn-primary" onclick="bank.createAccount()">Create account</button>
 
-</div>
-    
+<body>
+
+    <div class="Container">
+        <label for="fname">Name</label>
+        <input type="text" id="fname" placeholder="acnt holder name" required="true">
+        <br>
+        <label for="acno">Acc Number</label>
+        <input type="text" id="acno" placeholder="account number" required="true">
+        <br>
+        <label for="passwordd">Password</label>
+        <input type="password" id="passwordd" placeholder="password" required="true">
+        <br>
+        <button type="submit" class="btn btn-primary" onclick="bank.createAccount()">Create account</button>
+
+    </div>
+
 </body>
 <script src="./bank_script.js"></script>
+
 </html>

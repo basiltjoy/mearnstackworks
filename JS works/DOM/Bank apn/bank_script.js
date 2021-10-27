@@ -2,14 +2,14 @@
 class Bank {
     createAccount() {
         let p_name = fname.value
-        let accno = acno.value
-        let pass = password.value
+        let account_number = acno.value
+        let password = passwordd.value
         //  console.log(p_name, a_acno, pass);  //to prnt details
         let user = {                            //to cnvrt into object
-            p_name, accno, pass
+            p_name, account_number, password
         }
-        localStorage.setItem(user.accno, JSON.stringify(user))
-        alert("acc created")
+        localStorage.setItem(user.account_number, JSON.stringify(user))
+        alert("Account created")
         location.href = "./login1.html"
     }
     validateAccno(accno) {
@@ -18,12 +18,13 @@ class Bank {
 
     authenticate() {
         let account_number = acno1.value
-        let pwd = password1.value
+        let password = password1.value
         if (this.validateAccno(account_number)) {
             let data = JSON.parse(localStorage.getItem(account_number))
-            if (pwd == data.password) {
+            console.log(data);
+            if (password == data.password) {
                 alert("Login Success")
-                sessionStorage.setItem("Acc", account_number)
+                sessionStorage.setItem("Accno", account_number)
                 location.href = "./userhome.html"
             }
             else {
@@ -37,35 +38,80 @@ class Bank {
 
     logout() {
         alert("User Logged out")
-        sessionStorage.removeItem("Acc")
+        sessionStorage.removeItem("Accno")
         location.href = "./login1.html"
     }
 
+    loggOut() {
+        alert("Proceed?")
+        location.href = "./login.html"
+    }
+
     balanceEnquiry() {
+        /*  alert("Processing request")
+          let item = sessionStorage.getItem("Accno")
+          if (item in localStorage) {
+              let data = JSON.parse(localStorage.getItem(item))
+              
+              let my_div = document.createElement("div")
+              my_div.innerHTML = `avl balance: ${data.balance}`
+              document.querySelector("body").append(my_div)
+          }
+          else {
+              console.log("Invalid Info Provided");
+          }
+  */
         alert("Processing request")
-        let item = sessionStorage.getItem("Acc")
-        if(item in localStorage){
-            let data=JSON.parse(localStorage.getItem(item))
-            console.log(data);
-        }
-        else{
-            console.log("Invalid Info Provided");
-        }
-
+        document.getElementById("result").innerHTML = `your Acc balance: ${this.getBalance()}`
     }
 
-    fundTransfer(amount,to_acc){
-        let from_ac=sessionStorage.getItem("Acc")
-        let data=JSON.parse(localStorage.getItem(from_ac))
-        if(data.balance>=debit.value){
-          //  data.balance=localStorage.setItem(data.balance-debit.value)
-            alert("Transaction successful");
-        }
-        else{
-            alert("Transaction failed");
-        }
 
+    fundTransfer() {
+        let to_accountnum = to_acno.value;  //receiver
+        let c_accno = acno.value;           //receiver
+        let amount = amt.value;
+        if (to_accountnum == c_accno) {
+            if (this.validateAccno(c_accno)) {
+                if (amount <= Number(this.getBalance())) {
+
+                    let user_acno = sessionStorage.getItem("Accno")
+
+                    let payer_details = this.getAccountDetails(user_acno)
+                    let receiver_details = this.getAccountDetails(c_accno)
+
+                    receiver_details["balance"] += Number(amount)
+                    localStorage.setItem(c_accno, JSON.stringify(receiver_details))
+
+                    payer_details["balance"] -= Number(amount)
+                    localStorage.setItem(user_acno, JSON.stringify(payer_details))
+                    alert("TRANSACTION SUCCESSFULLY COMPLETED")
+                }
+                else {
+                    alert("INSUFFICIENT BALANCE")
+                }
+            }
+            else {
+                alert("INVALID ACCOUNT NUMBER")
+            }
+        }
+        else {
+            alert("ACCOUNT NUMBER MISMATCH")
+        }
     }
+
+
+    getBalance() {
+        let user = sessionStorage.getItem("Accno")
+        let data = JSON.parse(localStorage.getItem(user))
+        return data.balance
+    }
+
+
+    getAccountDetails(accno) {
+        return JSON.parse(localStorage.getItem(accno))
+    }
+
+
 
 }
 var bank = new Bank()
@@ -73,10 +119,10 @@ bank.createAccount
 
 
 let user = {
-    account_number: 1001,
-    first_name: "aswanth",
-    password: "abca",
-    balance: 3000
+    account_number: 1002,
+    first_name: "akhil",
+    password: "abcaa",
+    balance: 5000
 }
 
 
