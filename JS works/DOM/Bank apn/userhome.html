@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./userstyle.css">
 </head>
 
-<body>
+<body >
     <div class="container fixed-top" style="background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(97,186,255,1) 0%, rgba(166,239,253,1) 90.1% );;
     width: 100%; margin-left: 0%; ;">
     
@@ -26,7 +26,7 @@
         <a href="" style="padding-right: 5%;">SiteMap</a>
 
     </div>
-    <nav class="navbar navbar-expand-md navbar-light bg-secondary fixed-top">
+    <nav class="navbar navbar-expand-md navbar-light bg-secondary fixed-top" style="background: linear-gradient(90deg, #aa63d6 0%, #454fe2 100%);">
         <div class="container-fluid">
             <a class="navbar-brand fs-1 fst-italic" href="#">SBI </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -58,9 +58,12 @@
     </nav>
 
 
-    <div id="result">
-
+    <div>
+        <h1 id="result"></h1>
     </div>
+    <div>
+      <h1 id="user"></h1>
+  </div>
 
 <!-- Button trigger modal -->
 
@@ -74,8 +77,8 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <input type="text" placeholder="Account number" id="to_acno" ><br>
-          <input type="text" placeholder="Confirm" id="acno" style="margin-top: 2%;"><br>
+          <input type="text" placeholder="Receiver's acc. number" id="to_acno" ><br>
+       <!-- >   <input type="text" placeholder="Confirm" id="c_acno" style="margin-top: 2%;"><br></!-->
           <input type="text"placeholder="Amount" id="amt" style="margin-top: 2%;"><br>
       
         </div>

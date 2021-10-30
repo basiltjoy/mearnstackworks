@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account Login</title>
     <link rel="stylesheet" href="./style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        }
+    </style>
 </head>
-
 <body>
-
-    <div class="Container">
-        <label for="fname">Name</label>
-        <input type="text" id="fname" placeholder="acnt holder name" required="true">
-        <br>
-        <label for="acno">Acc Number</label>
-        <input type="text" id="acno" placeholder="account number" required="true">
-        <br>
-        <label for="passwordd">Password</label>
-        <input type="password" id="passwordd" placeholder="password" required="true">
-        <br>
-        <button type="submit" class="btn btn-primary" onclick="bank.createAccount()">Create account</button>
-
-    </div>
-
+<div class="Container1">
+    <h1>Customer Login</h1>
+    <label for="accno" id="label">Acc Number</label>
+    <input type="text" id="accno" placeholder="account number" >
+    <br>
+    <label for="password1" id="label">Password</label>
+    <input type="password" id="password1" placeholder="password">
+    <button class="button btn btn-outline-success" onclick="bank.authenticate()">Login</button>
+    <button class="button btn btn-outline-success" onclick="bank.log_out()">Logout</button>
+    
+</div>
+    
 </body>
 <script src="./bank_script.js"></script>
-
 </html>
