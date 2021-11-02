@@ -1,0 +1,91 @@
+body {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    height: 5000px;
+}
+
+#search{
+    margin-left: 70%;
+    margin-top: -23%;
+}
+
+#book_details{
+    background-color: #edf3cd;
+    width:fit-content;
+    font-weight: bolder;
+}
+
+#p2{
+    color: rgb(129 3 3);
+    margin-top: -87%;
+    margin-left: 98%;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.navbar-brand{
+    font-size: 30px;
+}
+
+#Carousel{
+    margin-top: 1%;
+}
+#book_gallery{
+    border-radius: 10%;
+    margin-left: 52%;
+    margin-top: -14%;
+    height: 212px;
+    width: 450px;
+}
+
+.Button1{
+    margin-top: -179%;
+    margin-left: 280%;
+}
+
+.Button2{
+    margin-left: 32%; 
+    margin-top: -20%;
+}
+.Button3{
+    margin-left: -465.5%;
+    margin-top: -211%;
+}
+
+#book_details{
+    margin-top: 10%;
+    margin-left: 8%;
+}
+
+.Book_Registration{
+    margin-left: 70%;
+    margin-top: -1%;
+    border: 4px rgb(186, 183, 183) solid;
+    width: 232px;
+    position: sticky;
+}
+                             
+.dropdown-menu[data-bs-popper] {
+    top: -291%;
+    left: -443px;
+    margin-top: .125rem;
+}
+
+.fas{
+    color: rgb(247, 138, 21);
+}
+
+#Arts{
+    margin-top: 5%;
+    padding-left: 5%;
+}
+
+.genres{
+    margin-top: 5%;
+    text-align:center;
+    height: 60px;
+    background: rgb(2,0,36);
+    background: linear-gradient(18deg, rgb(65, 65, 66) 0%, rgba(207,218,128,0.43534482758620685) 28%, rgba(85,218,214,1) 91%);
+}
+
+
+

@@ -14,28 +14,496 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <style>
-        body {
-            background-color: #8EC5FC;
-            background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-
-        }
-    </style>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://kit.fontawesome.com/f4f16d2e68.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="container bg-secondary bg-gradient " style="margin-left: 20%; margin-top: 15%; border:4px black solid;
-                                      width: 220px;"><br>
+    <nav class="navbar navbar-light bg-light fixed-top" style="height: 70px;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <p style="color:rgb(52, 52, 51);">good</p>
+                <p id="p2">reads</p>
+                <button class="Button1 btn btn-outline-info">Home</button>
+            </a>
+        </div>
+        <button class="Button2 btn btn-outline-info">MyBooks</button>
+        <div class="dropdown">
+            <button class="Button3 btn btn-outline-info dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Browse
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">
+                        <h4>Genres</h4>
+                    </a></li>
+                <li><a class="dropdown-item" href="#Arts">Art</a></li>
+                <li><a class="dropdown-item" href="#Fiction">Fiction</a></li>
+                <li><a class="dropdown-item" href="#Business">Business</a></li>
+                <li><a class="dropdown-item" href="#History">Historical Fiction</a></li>
+                <li><a class="dropdown-item" href="#Children's">Children's</a></li>
+            </ul>
+        </div>
+        <div id="search">
+            <input type="text" id="bookname" placeholder="Book Name">
+            <button type="submit" onclick="book1.findBook()">Search</button>
+        </div>
+    </nav>
+
+
+
+
+    <div id="Carousel">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./Images/headline-e2cd420e71737ff2815d09af5b65c4e4.png" style="margin-top: 80px;"
+                        class="d-block w-50 ">
+                </div>
+
+            </div>
+            <div class="carousel-inner1">
+                <div class="carousel-item active">
+                    <img id="book_gallery" src="./Images/book_gallery.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div id="book_details">
+        <div id="book" style="margin-left: 2%; margin-top: 15px; font-family:Times, serif">
+        </div>
+
+        <div id="book1" style="margin-left: 2%; font-family:Times, serif">
+        </div>
+
+        <div id="book2" style="margin-left: 2%; font-family:Times, serif">
+        </div>
+
+        <div id="book3" style="margin-left: 2%; font-family:Times, serif">
+        </div>
+
+        <div id="book4" style="margin-left: 2%; font-family:Times, serif">
+        </div>
+    </div>
+
+
+
+
+
+    <div class="Book_Registration container bg-secondary bg-gradient " style=""><br>
         <input type="text" placeholder="Book name" id="bk_name"><br><br>
         <input type="text" placeholder="Author name" id="bk_author" style="margin-top: 2%;"><br><br>
         <input type="number" placeholder="Amount" id="bk_amt" style="margin-top: 2%;"><br><br>
         <input type="text" placeholder="copies Sold" id="c_sold" style="margin-top: 2%;"><br><br>
         <input type="text" placeholder="copies available" id="c_avail" style="margin-top: 2%;"><br><br>
         <button type="submit" class="btn btn-outline-warning ms-4" onclick="book1.addtodb()">Add Book</button><br><br>
-        <a href="./bookDB.html"><button type="submit" class="btn btn-outline-info ms-4">Search</button></a><br><br>
 
     </div>
-   
+
+    <div class="genres">
+        <h1>Genres</h1>
+    </div>
+
+
+    <div id="Arts">
+        <div class="row">
+            <div class="card" style="width: 16rem;">
+                <img src="./Images/Stolen_lady.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">
+                    <h3>The Stolen Lady <br></h3>
+                    <p>Author:
+                    <h2> Laura Morelli </h2>
+                    </p>
+                    Rating:
+                    <div class="fas">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p style="font-family: Verdana, Geneva;">
+                        From the acclaimed author of The Night Portrait comes a stunning historical novel about two
+                        women, separated by five hundred years, who each hide Leonardo da Vinci’s Mona Lisa—with
+                        unintended consequences.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card" style="width: 16rem; margin-left: 0.5%;">
+                <img src="./Images/MonaLisa.jpg" class="card-img-top" alt="..." style="height: 364px;">
+                <div class="card-body">
+                    <p class="card-text">
+                    <h3>The Last Mona Lisa <br></h3>
+                    <p>Author:
+                    <h2> Jonathan Santlofer </h2>
+                    </p>
+                    Rating:
+                    <div class="fas">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-family: Verdana, Geneva;">
+                        The Mona Lisa is stolen by Vincent Peruggia. Exactly what happens in the two years before its
+                        recovery is a mystery. Many replicas of the Mona Lisa exist, and more than one historian has
+                        wondered if the painting now in the Louvre is a fake, switched in 1911.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card" style="width: 16rem; margin-left: 0.5%;">
+                <img src="./Images/promise.jpg" class="card-img-top" alt="..." style="height: 364px;">
+                <div class="card-body">
+                    <p class="card-text">
+                    <h3>Promise That You Will Sing About Me: The Power and Poetry of Kendrick Lamar <br></h3>
+                    <p>Author:
+                    <h2> Miles Marshall Lewis </h2>
+                    </p>
+                    Rating:
+                    <div class="fas">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p style="font-family: Verdana, Geneva;">
+                        The world is on fire.
+                        So tell your story.<br>
+                        Things are scary right now. We’re all being swept along by a tidal wave of history, and it’s
+                        easy to feel helpless. But we’re not helpless: we have minds, and imaginations, and the ability
+                        to visualize other worlds and valiant struggles.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+
+        <div id="Fiction">
+            <div class="row">
+                <div class="card" style="width: 16rem;">
+                    <img src="./Images/we are not.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">
+                        <h3>We Are Not Like Them <br></h3>
+                        <p>Author:
+                        <h2> Christine Pride, Jo Piazza </h2>
+                        </p>
+                        Rating:
+                        <div class="fas">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                        <p style="font-family: Verdana, Geneva;">
+                            Told from alternating perspectives, an evocative and riveting novel about the lifelong bond
+                            between two women, one Black and one white, whose friendship is indelibly altered by a
+                            tragic event—a powerful and poignant exploration of race in America today and its
+                            devastating impact on ordinary lives.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 16rem; margin-left: 0.5%;">
+                    <img src="./Images/marvellous.jpg" class="card-img-top" alt="..." style="height: 364px;">
+                    <div class="card-body">
+                        <p class="card-text">
+                        <h3>A Marvellous Light <br></h3>
+                        <p>Author:
+                        <h2>Freya Marske </h2>
+                        </p>
+                        Rating:
+                        <div class="fas">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p style="font-family: Verdana, Geneva;">
+                            Red White & Royal Blue meets Jonathan Strange and Mr. Norrell in debut author Freya Marske’s
+                            A Marvellous Light, featuring an Edwardian England full of magic, contracts, and
+                            conspiracies.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 16rem; margin-left: 0.5%;">
+                    <img src="./Images/my monticello.jpg" class="card-img-top" alt="..." style="height: 364px;">
+                    <div class="card-body">
+                        <p class="card-text">
+                        <h3>My Monticello <br></h3>
+                        <p>Author:
+                        <h2> Jocelyn Nicole Johnson </h2>
+                        </p>
+                        Rating:
+                        <div class="fas">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                        <p style="font-family: Verdana, Geneva;">
+                            A young woman descended from Thomas Jefferson and Sally Hemings driven from her neighborhood
+                            by a white militia. A university professor studying racism by conducting a secret social
+                            experiment on his own son. A single mother desperate to buy her first home even as the world
+                            hurtles toward catastrophe. Each fighting to survive in America.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+
+            <div id="Business">
+                <div class="row">
+                    <div class="card" style="width: 16rem;">
+                        <img src="./Images/high 5.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">
+                            <h3>The High 5 Habit: Take Control of Your Life with One Simple Habit <br></h3>
+                            <p>Author:
+                            <h2>Mel Robbins </h2>
+                            </p>
+                            <br>
+                            Rating:
+                            <div class="fas">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p style="font-family: Verdana, Geneva;">
+                             
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 16rem; margin-left: 0.5%;">
+                        <img src="./Images/contrarian.jpg" class="card-img-top" alt="..." style="height: 364px;">
+                        <div class="card-body">
+                            <p class="card-text">
+                            <h3>The Contrarian: Peter Thiel and Silicon Valley's Pursuit of Power <br></h3>
+                            <p>Author:
+                            <h2> Max Chafkin </h2>
+                            </p>
+                            Rating:
+                            <div class="fas">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p style="font-family: Verdana, Geneva;">
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 16rem; margin-left: 0.5%;">
+                        <img src="./Images/rationality.jpg" class="card-img-top" alt="..." style="height: 364px;">
+                        <div class="card-body">
+                            <p class="card-text">
+                            <h3>Rationality: What It Is, Why It Seems Scarce, Why It Matters <br></h3>
+                            <p>Author:
+                            <h2> Steven Pinker </h2>
+                            </p>
+                            Rating:
+                            <div class="fas">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half"></i>
+                            </div>
+                            <p style="font-family: Verdana, Geneva;">
+                                'Punchy, funny and invigorating ... Pinker is the high priest of rationalism' Sunday
+                                Times
+
+                                'If you've ever considered taking drugs to make yourself smarter, read Rationality
+                                instead. It's cheaper, more entertaining, and more effective' Jonathan Haidt, author of
+                                The Righteous Mind
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div id="History">
+                    <div class="row">
+                        <div class="card" style="width: 16rem; margin-left: 0.5%;">
+                            <img src="./Images/Matrix.jpg" class="card-img-top" alt="..." style="height: 364px;">
+                            <div class="card-body">
+                                <p class="card-text">
+                                <h3>Matrix <br></h3>
+                                <p>Author:
+                                <h2>Lauren Groff</h2>
+                                </p>
+                                Rating:
+                                <div class="fas">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half"></i>
+                                </div>
+                                <p style="font-family: Verdana, Geneva;">
+                                    Lauren Groff returns with her exhilarating first new novel since the groundbreaking
+                                    Fates and Furies.<br>
+                                    Cast out of the royal court by Eleanor of Aquitaine, deemed too coarse and
+                                    rough-hewn for marriage or courtly life, 17-year-old Marie de France is sent to
+                                    England to be the new prioress of an impoverished abbey, its nuns on the brink of
+                                    starvation and beset by disease.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 16rem; margin-left: 0.5%;">
+                            <img src="./Images/clever girl.jpg" class="card-img-top" alt="..." style="height: 364px;">
+                            <div class="card-body">
+                                <p class="card-text">
+                                <h3>A Most Clever Girl<br></h3>
+                                <p>Author:
+                                <h2> Stephanie Marie Thornton </h2>
+                                </p>
+                                Rating:
+                                <div class="fas">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p style="font-family: Verdana, Geneva;">
+                                    A Novel of an American Spy<br>
+
+                                    A thrilling tale of love, loyalty, and espionage, based on the incredible true story
+                                    of Elizabeth Bentley, a Cold War double agent spying for the Russians and the United
+                                    States, from USA Today bestselling author Stephanie Marie Thornton.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 16rem; margin-left: 0.5%;">
+                            <img src="./Images/hiddenchild.jpg" class="card-img-top" alt="..." style="height: 364px;">
+                            <div class="card-body">
+                                <p class="card-text">
+                                <h3>The Hidden Child <br></h3>
+                                <p>Author:
+                                <h2> Varian Johnson</h2>
+                                </p>
+                                Rating:
+                                <div class="fas">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p style="font-family: Verdana, Geneva;">
+                                    Londoners Eleanor and Edward Hamilton have wealth, status, and a happy marriage—but
+                                    the 1929 financial crash is looming, and they’re harboring a terrible, shameful
+                                    secret. How far are they willing to go to protect their charmed life—even if it
+                                    means abandoning their child to a horrific fate?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div id="Children's">
+                        <div class="row">
+                            <div class="card" style="width: 16rem; margin-left: 0.5%;">
+                                <img src="./Images/christmas.jpg" class="card-img-top" alt="..." style="height: 364px;">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    <h3>The Christmas Pig <br></h3>
+                                    <p>Author:
+                                    <h2> J.K. Rowling</h2>
+                                    </p>
+                                    Rating:
+                                    <div class="fas">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p style="font-family: Verdana, Geneva;">
+                                        A heartwarming, page-turning adventure about one child's love for his most
+                                        treasured thing, and how far he will go to find it. A tale for the whole family
+                                        to fall in love with, from one of the world’s greatest storytellers.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card" style="width: 16rem; margin-left: 0.5%;">
+                                <img src="./Images/troubled.jpg" class="card-img-top" alt="..." style="height: 364px;">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    <h3>The Troubled Girls of Dragomir Academy <br></h3>
+                                    <p>Author:
+                                    <h2> Anne Ursu </h2>
+                                    </p>
+                                    Rating:
+                                    <div class="fas">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half"></i>
+                                    </div>
+                                    <p style="font-family: Verdana, Geneva;">
+                                        A fantasy about a kingdom beset by monsters, a mysterious school, and a girl
+                                        caught in between them.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card" style="width: 16rem; margin-left: 0.5%;">
+                                <img src="./Images/playing.jpg" class="card-img-top" alt="..." style="height: 364px;">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    <h3>Playing the Cards You're Dealt <br></h3>
+                                    <p>Author:
+                                    <h2> Varian Johnson</h2>
+                                    </p>
+                                    Rating:
+                                    <div class="fas">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half"></i>
+                                    </div>
+                                    <p style="font-family: Verdana, Geneva;">
+                                        Literary powerhouse and Coretta Scott King Honor- and Boston Globe / Horn Book
+                                        Honor-winning author of The Parker Inheritence Varian Johnson explores themes of
+                                        toxic masculinity and family legacy in this heartfelt, hopeful story of one boy
+                                        discovering what it really means to be a man.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+                    </div>
+
 
 </body>
 

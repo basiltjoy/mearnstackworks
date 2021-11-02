@@ -132,8 +132,10 @@ class Bank {
             cust_name, account_number, password, balance
         }
         localStorage.setItem(user.account_number, JSON.stringify(user))
+        // swal("Successful!", "Account created,  Happy Banking!", "success");
         alert("Account Created")
         location.href = "./login.html"
+
     }
 
     validateAccno(accno) {
@@ -176,9 +178,9 @@ class Bank {
 
     balanceEnquiry() {
         let user_ac = JSON.parse(sessionStorage.getItem("User"))
-        let accnt_balance = JSON.parse(localStorage.getItem(user_ac))
+        let user_accbal = JSON.parse(localStorage.getItem(user_ac))
         alert("Processing request")
-        document.querySelector("#result").innerHTML = `${accnt_balance.balance}`
+        document.querySelector("#result").innerHTML = `${user_accbal.balance}`
     }
 
     getBalance() {
@@ -195,20 +197,38 @@ class Bank {
                 let receiver_details = JSON.parse(localStorage.getItem(to_accountnum))
                 let receiver_balance = Number(receiver_details.balance)
                 let rec_bal = receiver_balance + Number(amount)
-                document.querySelector("#result").innerHTML = `your account ${receiver_details.account_number} is credited, avail balance:${rec_bal}`
+               // document.querySelector("#result").innerHTML = `${receiver_details.account_number} is credited, avail balance:${rec_bal}`
 
                 let useracc = JSON.parse(sessionStorage.getItem("User"))
                 let user_bal = JSON.parse(localStorage.getItem(useracc))
                 let user_accbal = Number(user_bal.balance) - Number(amount)
-                alert(`your account ${useracc} is debited, avail balance:${user_accbal}`)
-
-
+               // alert(`${useracc} is debited, avail balance:${user_accbal}`)
+               alert("Transaction successfull")
             }
             else {
                 alert("Insufficient Fund")
             }
         }
+    }
 
+    transactionHistory() {
+        let trans = [];
+        let amount = amt.value;
+        let user_ac = JSON.parse(sessionStorage.getItem("User"))
+        let user_accbalance = JSON.parse(localStorage.getItem(user_ac))
+        let user_bal = Number(user_accbalance.balance) - Number(amount)
+
+        let to_accountnum = to_acno.value;
+     
+        let receiver_details = JSON.parse(localStorage.getItem(to_accountnum))
+        //let receiver_balance = Number(receiver_details)
+
+
+        trans.push(user_accbalance.account_number, user_bal)
+       // document.querySelector("#trans").innerHTML = `User: ${trans} has been debited with ${amount}`
+        trans.push(receiver_details.account_number, receiver_details.balance)
+        document.querySelector("#trans").innerHTML = `${trans[0]} debited with ${amount} Avail balance:${trans[1]} and 
+                                                    ${trans[2]}credited, Avail balance: ${trans[3]}`
 
     }
 }

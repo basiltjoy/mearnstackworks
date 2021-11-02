@@ -9,8 +9,9 @@ class booklibrary {
             b_name, b_author, b_amount, b_sold, b_avail
         }
         localStorage.setItem(book_details.b_name, JSON.stringify(book_details))
-        alert("book created")
-        location.href = "./index.html"
+        swal("Submitted!", "Book added to database!", "success");
+       // alert("book created")
+       // location.href = "./index.html"
 
     }
 
@@ -26,6 +27,8 @@ class booklibrary {
         document.querySelector("#book2").innerHTML=`Book Price:${b_details.b_amount} `
         document.querySelector("#book3").innerHTML=`Books Sold:${b_details.b_sold} `
         document.querySelector("#book4").innerHTML=`Available Stock:${b_details.b_avail} `
+        swal("enjoy the book!", "You’re in the right place. Tell us what titles or genres you’ve enjoyed in the past, and we’ll give you surprisingly insightful recommendations.!", "success");
+      
     }
 
 
