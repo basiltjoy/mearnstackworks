@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Comments</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td class="fw-bolder">PostId</td>
+            <td class="text-center fw-bolder">Name</td>
+            <td class="text-center fw-bolder">Email</td>
+            <td class="text-center fw-bolder">Body</td>
+        </tr>
+        <tbody id="comments"> </tbody>
+    </table>
+    <button class="btn btn-success" onclick="fetchComments()">Fetch Comments</button>
+</body>
+
+
+<script>
+    function fetchComments() {
+        var comment = new XMLHttpRequest()
+        comment.open("get", "https://jsonplaceholder.typicode.com/comments")
+        comment.send()
+        comment.onreadystatechange = () => {
+            if (comment.readyState == 4) {
+                if (comment.status > 199 && comment.status < 300) {
+                    let data = JSON.parse(comment.responseText)
+                    displayComments(data)
+                }
+            }
+        }
+    }
+    function displayComments(data) {
+        let comments_data = ``
+        for (coment of data) {
+            let Pid = coment.postId;
+            let Cname = coment.name;
+            let Cmail = coment.email;
+            let Cbody = coment.body
+            comments_data += `<tr><td>${Pid}</td> <td>${Cname}</td> <td>${Cmail}</td> <td>${Cbody}</td> </tr>`
+        }
+        document.querySelector("#comments").innerHTML = comments_data
+    }
+</script>
+
+</html>

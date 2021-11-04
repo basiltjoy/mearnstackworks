@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td class="fw-bolder">AlbumId</td>
+            <td class="text-center fw-bolder">Title</td>
+            <td class="text-center fw-bolder">Url</td>
+            <td class="text-center fw-bolder">ThumbnailUrl</td>
+        </tr>
+        <tbody id="photos"></tbody>
+    </table>
+    <button class="btn btn-danger" onclick="fetchPhotos()">Fetch Photos</button>
+</body>
+
+
+<script>
+    function fetchPhotos() {
+        var pics = new XMLHttpRequest()
+        pics.open("get", "https://jsonplaceholder.typicode.com/photos")
+        pics.send()
+        pics.onreadystatechange = () => {
+            if (pics.readyState == 4) {
+                if (pics.status > 199 && pics.status < 300) {
+                    let pictures = JSON.parse(pics.responseText)
+                    displayPhotos(pictures)
+                }
+            }
+        }
+    }
+    function displayPhotos(pictures) {
+        let photos_data = ``
+        for (let pic of pictures) {
+            let Aid = pic.albumId;
+            let Atitle = pic.title;
+            let Aurl = pic.url;
+            let Athumb = pic.thumbnailUrl;
+            photos_data += `<tr><td>${Aid}</td> <td>${Atitle}</td> <td>${Aurl}</td> <td>${Athumb}</td></tr>`
+        }
+        document.querySelector("#photos").innerHTML = photos_data
+    }
+</script>
+
+</html>

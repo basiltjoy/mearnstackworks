@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo's</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <td class="fw-bolder">User id</td>
+            <td class="text-center fw-bolder">Title</td>
+            <td class="fw-bolder">Completed</td>
+        </tr>
+        <tbody id="result"></tbody>
+    </table>
+    <button onclick="fetchTodo()" class="btn btn-outline-success">Todo List</button>
+
+</body>
+
+<script>
+    function fetchTodo() {
+        let todo = new XMLHttpRequest()
+        todo.open("get", "https://jsonplaceholder.typicode.com/todos")
+        todo.send()
+        todo.onreadystatechange = () => {
+            if (todo.readyState == 4) {
+                if (todo.status > 199 && todo.status < 300) {
+                    let todo_list = JSON.parse(todo.responseText)
+                    displaytodo(todo_list)
+                }
+            }
+        }
+    }
+    function displaytodo(todo_list) {
+        todo_data = ``
+        for (todos of todo_list) {
+            let uid = todos.userId
+            let tittle = todos.title
+            let com = todos.completed
+            todo_data += `<tr> <td>${uid}</td> <td>${tittle}</td> <td>${com}</td></tr>`
+        }
+        document.querySelector("#result").innerHTML = todo_data
+    }
+</script>
+
+</html>

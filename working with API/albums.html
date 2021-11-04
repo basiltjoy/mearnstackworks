@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>albums</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Fetch Albums</h1>
+    <table >
+        <tr>
+            <td class="fw-bolder">User Id</td>
+            <td class="text-center fw-bolder">Title</td>
+        </tr>
+        <tbody id="albums"></tbody>
+    </table>
+    <button onclick="fetchAlbums()" class="btn btn-info">Fetch Data</button>
+</body>
+
+
+<script>
+    function fetchAlbums() {
+        var album_list = new XMLHttpRequest()
+        album_list.open("get", "https://jsonplaceholder.typicode.com/albums")
+        album_list.send()
+        album_list.onreadystatechange = () => {
+            if (album_list.readyState == 4) {
+                if (album_list.status > 199 && album_list.status < 300) {
+                    let albums = JSON.parse(album_list.responseText)
+                    displayAlbums(albums)
+                }
+            }
+        }
+    }
+    function displayAlbums(albums) {  //for displaying the contents needed obtained frm server
+        let album_data = ``
+        for (list of albums) {        //to iterate
+            let user = list.userId;
+            let tittle = list.title;
+            album_data +=
+            `<tr><td> ${user}</td> <td> ${tittle}</td></tr>`
+        }
+        //to append album_data into the tbody
+        document.querySelector("#albums").innerHTML=album_data
+    }
+
+</script>
+
+</html>
+
