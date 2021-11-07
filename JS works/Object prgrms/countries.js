@@ -323,8 +323,8 @@ var countries = [
 ]
 
 //print name of countries
-// var n = countries.map((country) => country.name).map((country) => country.common)     // //.forEach((country)=>console.log(country.common));
-// console.log("Country Names:",n);
+ var n = countries.map((country) => country.name).map((country) => country.common)     // //.forEach((country)=>console.log(country.common));
+ console.log("Country Names:",n);
 
 //print population
 // var pop= countries.map((country)=>country.population)

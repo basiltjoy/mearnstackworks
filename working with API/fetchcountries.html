@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Countries</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            /*  background-image: linear-gradient(120deg, #84fab0 0%, #a7d9f1 100%);  */
+            background: url(./Images/countries2.png);
+            height: 1500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn btn-secondary fixed-top">
+        <div class="form-group ">
+            <label for="sel1">Select list:</label>
+            <select class="form-control fw-normal" id="cntry">
+                <option>india</option>
+                <option>Afghanistan</option>
+                <option>South Africa</option>
+                <option>Canada</option>
+                <option>Cayman Islands</option>
+                <option>Iraq</option>
+                <option>Switzerland</option>
+                <option>Ireland</option>
+                <option>Israel</option>
+                <option>Syrian Arab Republic</option>
+                <option>Luxembourg</option>  
+                <option>Singapore</option>
+                <option>Åland Islands</option>  
+                <option>Sweden</option>
+            </select>
+        </div>
+        <button class=" mt-2 btn btn-outline-info" onclick="fetchCountries()">Fetch Countries</button>
+    </div>
+
+
+
+
+    <div class="card" style="border: none;
+    position: fixed;
+    width: 0%;
+    margin-top: 15%;
+    margin-left: 35%;
+    font: bolder 1em sans-serif;">
+        <div id="result" style="border: none;">
+
+        </div>
+    </div>
+</body>
+
+<script>
+    /*   function fetchCountries() {
+           let countries = new XMLHttpRequest()
+           countries.open("get", "https://restcountries.com/v2/all")
+           countries.send()
+           countries.onreadystateChange = () => {
+               if (countries.readyState == 4) {
+                   if (countries.status > 199 && countries.status < 300) {
+                       country = []  
+                       Count = JSON.parse(countries.responseText)
+                       country.push(Count)
+                       console.log(country[0]);    
+                       displayCountries(Country)
+   
+                   }
+               }
+           }
+       }       
+       function displayCountries(Country) {
+           let Rcountries = ``
+           for (let cname of Country) {
+               let countryname = cname.name
+               Rcountries+=`<tr> <td>${countryname}</td> </tr>`
+           }
+           document.querySelector("#result").innerHTML=Rcountries
+       }     */
+
+
+    //Implementing Fetch method     
+    function fetchCountries() {
+        let country_name = cntry.value;
+        fetch(`https://restcountries.com/v2/name/${country_name}?fullText=true`).
+            then(res => res.json()).
+            then(data => displayValue(data))
+    }
+
+    function displayValue(data) {
+        let country_name = `Country Name: ${data[0].name}`;
+        let country_capital = `Country Capital: ${data[0].capital}`;
+        let country_population = `Country Population: ${data[0].population}`;
+        let country_flag = ` ${data[0].flags["svg"]}`   /*   */
+        let country_curr = `Country Currency: ${data[0].currencies[0].name}`
+        let country_lang = data[0].languages  /*.name + "," + data[0].languages[1].name  */
+        c_lang=country_lang.map((language)=>language.name)
+        console.log(c_lang);
+    
+        let html_data = ``
+        html_data = `<div class="card" style="width: 20rem; background-color:#96caf0;">
+        <img src="${country_flag}" class="card-img-top" alt="..."> <br>
+        ${country_name}<br>
+        ${country_capital} <br>
+        ${country_population}<br>
+        ${country_curr}<br><br>
+        Languages spoken: ${c_lang  }<br> 
+       `
+
+        document.querySelector("#result").innerHTML = html_data
+    }
+
+</script>
+
+</html>

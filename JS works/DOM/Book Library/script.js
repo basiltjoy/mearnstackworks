@@ -9,10 +9,10 @@ class booklibrary {
             b_name, b_author, b_amount, b_sold, b_avail
         }
         localStorage.setItem(book_details.b_name, JSON.stringify(book_details))
-        swal("Submitted!", "Book added to database!", "success");
+      
        // alert("book created")
-       // location.href = "./index.html"
-
+        location.href = "./index.html"
+        swal("Submitted!", "Book added to database!", "success");
     }
 
     validateBook(bookname) {
