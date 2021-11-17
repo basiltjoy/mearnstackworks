@@ -66,7 +66,7 @@ balanceEnquiry() {
 }
 
 
-/*   fundTransfer() {
+   fundTransfer() {
        let to_accountnum = to_acno.value;  //receiver
        let c_accno = acno.value;           //receiver
        let amount = amt.value;
@@ -116,9 +116,9 @@ balanceEnquiry() {
 }
 var bank = new Bank()  
 
-bank.createAccount          */
+bank.createAccount          
 
-
+*/
 
 
 
@@ -216,17 +216,18 @@ class Bank {
         let amount = amt.value;
         let user_ac = JSON.parse(sessionStorage.getItem("User"))
         let user_accbalance = JSON.parse(localStorage.getItem(user_ac))
-        let user_bal = Number(user_accbalance.balance) - Number(amount)
+        let user_bal = Number(user_accbalance.balance) -  Number(amount)
+   
 
         let to_accountnum = to_acno.value;
      
         let receiver_details = JSON.parse(localStorage.getItem(to_accountnum))
-        //let receiver_balance = Number(receiver_details)
+        let receiver_fund = Number(receiver_details.balance)+Number(amount)
 
 
         trans.push(user_accbalance.account_number, user_bal)
        // document.querySelector("#trans").innerHTML = `User: ${trans} has been debited with ${amount}`
-        trans.push(receiver_details.account_number, receiver_details.balance)
+        trans.push(receiver_details.account_number, receiver_fund)
         document.querySelector("#trans").innerHTML = `${trans[0]} debited with ${amount} Avail balance:${trans[1]} and 
                                                     ${trans[2]}credited, Avail balance: ${trans[3]}`
 

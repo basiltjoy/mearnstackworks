@@ -28,10 +28,10 @@ var employees = [
 
 //print experience of each employee
 //outliers-non feasible values
- for(let emp of employees){
+/* for(let emp of employees){
  var experience=emp[5]-emp[4];
  console.log(emp[1],experience);
- }
+ }  */
 
 
 
@@ -70,7 +70,7 @@ var employees = [
 //    if (emp[3] == "developer") {
 //        console.log((emp[1]+emp[2]));
 //    }
-//                     }
+// }
 
 
 
@@ -82,9 +82,9 @@ var employees = [
 
 
 //print total sum of salary of developers  //not completed
-// for (let emp of employees) {
-//    if (emp[3] == "developer") {
-//        var x=emp[3,1]+emp[2];
-//        console.log(x);   
-//    } 
-//  }
+for (let emp of employees) {
+    if (emp[3] == "developer") {
+     
+    }
+    
+}

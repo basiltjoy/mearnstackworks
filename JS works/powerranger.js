@@ -10,7 +10,7 @@
 
 // another method
   for(let i=1;i<=num;i++){ //2+22
-    res=res*10+num;
+   var res=res*10+num;
    sum+=res
     }
     console.log(sum);

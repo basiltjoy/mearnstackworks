@@ -24,6 +24,6 @@ for (let row = 1; row <= 1; row++) {
             str += row++
         }
         console.log(str);
-    }
+    }  
 
 }

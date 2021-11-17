@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files   
+F:\Arsha\MEARN STACK\Angular\bank\src\assets\online-banking-businessman-holding-tablet-computer-dark-background-collage-financial-pictograms-panorama-concept-178079853.jpg */
+
+body{
+    background-image: url(./assets/online-banking-businessman-holding-tablet-computer-dark-background-collage-financial-pictograms-panorama-concept-178079853.jpg);
+    background-size:cover;
+    background-repeat:repeat-y;
+    background-blend-mode:normal; 
+    font-family: sans-serif;
+
+}

@@ -42,8 +42,8 @@ var employees = [
 
 
 //print array method combination-filter & map
-// var developer=employees.filter(emp=>emp[3]=="developer").map(emp=>emp[1]emp[2])
-// console.log(developer);
+/* var developer=employees.filter(emp=>emp[3]=="developer").map(emp=>emp[1]+emp[2])
+ console.log(developer); */
 
 
 //employees of ba

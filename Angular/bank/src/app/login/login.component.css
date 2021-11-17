@@ -1,0 +1,41 @@
+.Container1{
+    margin-top: 15ch;
+    margin-left: 29%;
+    width: 44%;
+    height: 100%;
+    border: 3px black solid;
+    background: linear-gradient(90deg, rgba(217,235,232,1) 0%, rgba(59,58,58,1) 0%);
+    padding-bottom: 10px;
+    background: rgba(19, 18, 18, 0.5);
+    color: ivory;
+}
+
+h1{
+   color: rgb(224, 224, 231);
+   text-align: center;
+   text-transform:uppercase;
+   font-weight: bold;
+}
+
+input{
+    width: 55%;
+}
+
+#password1{
+    margin-top: 5%;
+    margin-left: 7%;
+}
+
+#accno{
+margin-left: 2%;
+}
+
+.button{
+    margin-top: 8%;
+    margin-left: 20%;
+}
+
+#label{
+    margin-top: 5%;
+    margin-left: 49px;
+}

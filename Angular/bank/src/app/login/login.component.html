@@ -1,0 +1,14 @@
+
+<div class="Container1">
+    <p>{{aim }}</p>          <!-- String Interpolation   </!-->
+  
+    <h1>Customer Login</h1>
+    <label for="accno" id="label">Acc Number</label>
+    <input type="text" id="accno" (change)="accnoChange($event)" placeholder="account number" [value]="accno"> <!-- Property Binding, Event Binding(argument)</!-->
+    <br>
+    <label for="password1" id="label">Password</label>
+    <input type="password" id="password1" (change)="pswdChange($event)" placeholder="password">
+    <button class="button btn btn-outline-warning" type="submit" (click)="login()" >Login</button>  <!-- Event Binding</!-->
+  
+    
+</div>
