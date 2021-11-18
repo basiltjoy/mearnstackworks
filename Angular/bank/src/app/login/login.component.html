@@ -1,14 +1,63 @@
-
+<!--               Two-way Binding</!-->
 <div class="Container1">
-    <p>{{aim }}</p>          <!-- String Interpolation   </!-->
-  
+    <p>{{aim }}</p>
+
     <h1>Customer Login</h1>
     <label for="accno" id="label">Acc Number</label>
-    <input type="text" id="accno" (change)="accnoChange($event)" placeholder="account number" [value]="accno"> <!-- Property Binding, Event Binding(argument)</!-->
+    <input type="text" id="accno" [(ngModel)]="acno" placeholder="account number" [value]="accno">
+
     <br>
     <label for="password1" id="label">Password</label>
-    <input type="password" id="password1" (change)="pswdChange($event)" placeholder="password">
-    <button class="button btn btn-outline-warning" type="submit" (click)="login()" >Login</button>  <!-- Event Binding</!-->
-  
-    
+    <input type="password" id="password1" [(ngModel)]="pwd" placeholder="password">
+    <button class="button btn btn-outline-warning" type="submit" (click)="login()">Login</button>
+
 </div>
+
+
+
+
+<!--               String Interpolation         
+<div class="Container1">
+    <p><b>{{aim }}</b></p>    
+
+    <h1>Customer Login</h1>
+    <label for="accno" id="label">Acc Number</label>
+    <input type="text" id="accno"  placeholder="account number" >
+    <br>
+    <label for="password1" id="label">Password</label>
+    <input type="password" id="password1" [(ngModel)]="pwd" placeholder="password">
+    <button class="button btn btn-outline-warning" type="submit" >Login</button>
+
+</div>  </!-->
+
+
+
+
+
+<!--                            Property Binding            
+<div class="Container1">
+
+    <h1>Customer Login</h1>
+    <label for="accno" id="label">Acc Number</label>
+    <input type="text" id="accno"  [value]="accno">
+
+    <br>
+    <label for="password1" id="label">Password</label>
+    <input type="password" id="password1" [(ngModel)]="pwd" placeholder="password">
+    <button class="button btn btn-outline-warning" type="submit">Login</button>
+</div>       </!-->
+
+
+
+<!--                         Event Binding(argument)       
+<div class="Container1">
+
+    <h1>Customer Login</h1>
+    <label for="accno" id="label" >Acc Number</label>
+    <input type="text" id="accno" placeholder="Account Number"  (change)="accnoChange($event)" >
+
+    <br>
+    <label for="password1" id="label">Password</label>
+    <input type="password" id="password1" (change)="pswdChange($event)"  placeholder="password">
+    <button class="button btn btn-outline-warning" type="submit" (click)="login()">Login</button>
+</div>     </!-->
