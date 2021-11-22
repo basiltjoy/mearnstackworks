@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from '../Services/data.service';
 
 @Component({
   selector: 'app-login',
@@ -14,76 +16,66 @@ export class LoginComponent implements OnInit {
 
   pwd = ""
 
-  data: any = {
-    1000: { acno: 1000, uname: "sachi", password: "1000", balance: 5000 },
-    1001: { acno: 1001, uname: "aswin", password: "1001", balance: 3000 },
-    1002: { acno: 1002, uname: "akhil", password: "1002", balance: 8000 }
-  }
 
-  constructor() { }
+
+  constructor(private routers: Router, private ds: DataService) { }    //Dependancy Injection
+
 
   ngOnInit(): void {
   }
 
- /*  accnoChange(event: any) {        //Event Binding with argument    
- 
-     this.acno = event.target.value; //Event Binding with argument
-     console.log(this.acno);
- 
-   }
- 
-   pswdChange(event: any) {
- 
-     this.pwd = event.target.value;  //Event Binding with argument
-     console.log(this.pwd);
- 
-   }  */
+  /*  accnoChange(event: any) {        //Event Binding with argument    
+  
+      this.acno = event.target.value; //Event Binding with argument
+      console.log(this.acno);
+  
+    }
+  
+    pswdChange(event: any) {
+  
+      this.pwd = event.target.value;  //Event Binding with argument
+      console.log(this.pwd);
+  
+    }  */
 
 
 
-/*  login() {          //Event Binding
-    alert("login Clicked")
-  }    */  
+  /*  login() {          //Event Binding
+      alert("login Clicked")
+    }    */
 
 
 
   login() {
-     var acno = this.acno;
-     var pwd = this.pwd;
-     let db = this.data
-     if (acno in db) {
-       if (pwd == db[acno].password) {
-         alert("login Successful")
+    var acno = this.acno;
+    var pwd = this.pwd;
+    let result = this.ds.login(acno, pwd)
+    if (result) {
+      alert("login Successful")
+      this.routers.navigateByUrl('dashboard')
+    }
+  }
+
+
+
+  /*   login(a:any,p:any) {       
+       console.log(a);
+            
+       var acno = a.value;
+       var pwd = p.value;
+       let db = this.data
+       if (acno in db) {
+         if (pwd == db[acno].password) {
+           alert("login Successful")
+         }
+         else {
+           alert("Invalid password")
+         }
        }
        else {
-         alert("Invalid password")
+         alert("Invalid Account number")
        }
-     }
-     else {
-       alert("Invalid Account number")
-     }
-   }     
- 
- 
- 
- /*   login(a:any,p:any) {       
-      console.log(a);
-           
-      var acno = a.value;
-      var pwd = p.value;
-      let db = this.data
-      if (acno in db) {
-        if (pwd == db[acno].password) {
-          alert("login Successful")
-        }
-        else {
-          alert("Invalid password")
-        }
-      }
-      else {
-        alert("Invalid Account number")
-      }
-    }  */
+     }  */
 
 
 

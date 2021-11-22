@@ -12,4 +12,11 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  credit() {
+    alert("Are you sure to proceed with transaction")
+  }
+
+  debit() {
+    alert("Are you sure to proceed with transaction")
+  }
 }

@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>Signup</h1>
+    <hr>
+  <i class="far fa-user fa-1x"></i>
+    <input type="text"  name="uname" [(ngModel)]="uname" placeholder="username" id="uname">
+    <br><br>
+    <i class="far fas fa-user-circle fa-1x"></i>  
+    <input type="text"   name="acno" [(ngModel)]="acno"  placeholder="account number" id="acno">
+    <br><br>
+   <i class="far fas fa-key fa-1x"></i>   
+    <input type="text"  name="pswd" [(ngModel)]="pswd" placeholder="password" id="pswd">
+    <br><br>
+    <div>
+     <button type="submit" (click)="register()" value="register" class="btn btn-warning">Register</button>
+    </div> 
+    <br><br>
+    <p>Please <a routerLink=''>login</a> if already registered</p>
+
+
+</div>

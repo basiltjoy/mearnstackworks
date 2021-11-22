@@ -1,1 +1,23 @@
-<p>dashboard works!</p>
+<div class="container">
+    <h1 style="color: cornflowerblue;">Welcome...</h1>
+
+    <div class="credit">
+        <div class="card">
+            <h1 style="color: #212002;">Credit Transactions</h1>
+            <input type="text" placeholder="Account number">
+            <input type="password" placeholder="password">
+            <input type="text" placeholder="Amount">
+            <button type="submit" (click)="credit()" class="btn btn-outline-success">Proceed</button>
+        </div>
+    </div>
+
+    <div class="debit">
+        <div class="card card1" >
+            <h1>Debit Transactions</h1>
+            <input type="text" placeholder="Account number">
+            <input type="password" placeholder="password">
+            <input type="text" placeholder="Amount">
+            <button type="submit" (click)="debit()" class="btn btn-outline-warning">Proceed</button>
+        </div>
+    </div>
+</div>

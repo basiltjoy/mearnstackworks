@@ -1,7 +1,7 @@
 .Container1{
         margin-top: 15ch; 
         margin-left: 29%;
-        width: 44%;
+        width: 55%;
         height: 190%;
         border: 3px #020202 solid;
         background: linear-gradient( 
@@ -26,7 +26,7 @@ input{
 
 #password1{
     margin-top: 5%;
-    margin-left: 7%;
+    margin-left: 6.5%;
 }
 
 #accno{
@@ -40,5 +40,9 @@ input{
 
 #label{
     margin-top: 5%;
-    margin-left: 49px;
+    margin-left: 6.5%;
+}
+
+span{
+    margin-left: 65%;   
 }
