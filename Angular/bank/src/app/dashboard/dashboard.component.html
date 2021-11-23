@@ -1,23 +1,36 @@
+
+
 <div class="container">
-    <h1 style="color: cornflowerblue;">Welcome...</h1>
+    <nav class="navbar navbar-light bg-light navbar-expand-lg">
+        <div class="container-fluid">
+            <span class="navbar-text">
+                Let's start yout Banking
+            </span>
+            <button type="submit" class="btn btn-outline-info" (click)="logout()" id="logout">Logout</button>
+        </div>
+    </nav>
+
+
+
 
     <div class="credit">
         <div class="card">
             <h1 style="color: #212002;">Credit Transactions</h1>
-            <input type="text" placeholder="Account number">
-            <input type="password" placeholder="password">
-            <input type="text" placeholder="Amount">
-            <button type="submit" (click)="credit()" class="btn btn-outline-success">Proceed</button>
+            <input type="text" placeholder="Account number" [(ngModel)]="accno">
+            <input type="password" placeholder="password" [(ngModel)]="pwd">
+            <input type="text" placeholder="Amount" [(ngModel)]="amt">
+            <button type="submit" (click)="credit()" class="btn btn-outline-dark">Proceed</button>
         </div>
     </div>
 
     <div class="debit">
-        <div class="card card1" >
+        <div class="card card1">
             <h1>Debit Transactions</h1>
-            <input type="text" placeholder="Account number">
-            <input type="password" placeholder="password">
-            <input type="text" placeholder="Amount">
+            <input type="text" placeholder="Account number" [(ngModel)]="accno1">
+            <input type="password" placeholder="password" [(ngModel)]="pwd1">
+            <input type="text" placeholder="Amount" [(ngModel)]="amt1">
             <button type="submit" (click)="debit()" class="btn btn-outline-warning">Proceed</button>
         </div>
     </div>
+
 </div>

@@ -5,7 +5,6 @@
 
 
 h1{
-    text-align: center;
     color: rgb(238, 222, 131);
     font-style: italic;
     font-weight: 800;
@@ -42,4 +41,20 @@ button{
     margin-left: 7px;
 }
 
+#logout{
+
+    margin-top: 0%;
+}
+
+
+
+.navbar{
+    width: 987px;
+    margin-left: -21%;
+}
+.navbar-text{
+    font-style: italic;
+    font-weight: bolder;
+    color: black;
+}
 
