@@ -1,20 +1,33 @@
-<div class="container">
+<form (ngSubmit)="register()" [formGroup]="formValidation">
+  <div class="container">
     <h1>Signup</h1>
     <hr>
-  <i class="far fa-user fa-1x"></i>
-    <input type="text"  name="uname" [(ngModel)]="uname" placeholder="username" id="uname">
+    <i class="far fa-user fa-1x"></i>
+    <input type="text" name="uname" formControlName="uname" placeholder="username" id="uname">
     <br><br>
-    <i class="far fas fa-user-circle fa-1x"></i>  
-    <input type="text"   name="acno" [(ngModel)]="acno"  placeholder="account number" id="acno">
+    <div *ngIf=" (this.formValidation.get('uname')?.touched || this.formValidation.get('uname')?.dirty)  && this.formValidation.get('uname')?.errors" id="errors">
+      Invalid username
+    </div>
+
+    <i class="far fas fa-user-circle fa-1x"></i>
+    <input type="text" name="acno" formControlName="acno" placeholder="account number" id="acno">
     <br><br>
-   <i class="far fas fa-key fa-1x"></i>   
-    <input type="text"  name="pswd" [(ngModel)]="pswd" placeholder="password" id="pswd">
+    <div *ngIf=" (this.formValidation.get('acno')?.touched || this.formValidation.get('acno')?.dirty)  && this.formValidation.get('acno')?.errors" id="errors">
+      Invalid Account number
+    </div>
+
+    <i class="far fas fa-key fa-1x"></i>
+    <input type="text" name="pswd" formControlName="pswd" placeholder="password" id="pswd">
     <br><br>
+
+
+ 
     <div>
-     <button type="submit" (click)="register()" value="register" class="btn btn-warning">Register</button>
-    </div> 
+      <button type="submit"  value="register" class="btn btn-outline-dark"></button>
+    </div>
+  
+
     <br><br>
     <p>Please <a routerLink=''>login</a> if already registered</p>
-
-
-</div>
+  </div>
+</form>

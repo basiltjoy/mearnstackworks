@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataService } from '../Services/data.service';
 
@@ -16,9 +17,17 @@ export class LoginComponent implements OnInit {
 
   pwd = ""
 
+  loginForm = this.fb.group({
+    acno: ['', [Validators.required, Validators.pattern('[0-9 ]*')]],
+    pwd: ['', [Validators.required]]
+  })
 
 
-  constructor(private routers: Router, private ds: DataService) { }    //Dependancy Injection
+
+ 
+
+
+  constructor(private routers: Router, private ds: DataService, private fb: FormBuilder) { }    //Dependancy Injection
 
 
   ngOnInit(): void {
@@ -47,12 +56,20 @@ export class LoginComponent implements OnInit {
 
 
   login() {
-    var acno = this.acno;
-    var pwd = this.pwd;
-    let result = this.ds.login(acno, pwd)
-    if (result) {
-      alert("login Successful")
-      this.routers.navigateByUrl('dashboard')
+    var acno = this.loginForm.value.acno;
+    var pwd = this.loginForm.value.pwd;
+    if (this.loginForm.valid) {
+      let result = this.ds.login(acno, pwd)
+      if (result) {
+
+ 
+
+        alert("login Successful")
+        this.routers.navigateByUrl('dashboard')
+      }
+    }
+    else{
+      alert("Invalid data submission occured")
     }
   }
 

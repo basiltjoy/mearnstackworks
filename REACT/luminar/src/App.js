@@ -1,14 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
-import test from './test'
+import Random from './Random';
+import { useState } from "react"
 
-function GetData(){
-  <h2>ssd</h2>;
-  <test></test>
+function App() {
+  const name = "ABCD"
+
+  return (
+    <div className="App">
+      <Random value={name} />
+    </div>
+
+  );
 }
-
-         
-
 
 
 export default App;
+

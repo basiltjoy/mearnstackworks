@@ -1,0 +1,19 @@
+.card{
+    background-color: inherit;
+border: black 2px inherit;
+width: 550px;
+height: 550px;
+}
+
+input{
+    margin-top: 8px;
+    width:280px;
+    text-align: center;
+    margin-left: 20px;
+}
+
+a{
+    text-decoration: none;
+    padding:0.5%;
+}
+

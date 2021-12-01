@@ -1,23 +1,27 @@
-<!--               Two-way Binding</!-->
+<!--               Two-way Binding    </!-->
 <div class="Container1">
-    <p>{{aim }}</p>
+    <form action="" [formGroup]="loginForm">
+        <p>{{aim }}</p>
 
-    <h1>Customer Login</h1>
-    <label for="accno" id="label">Acc Number</label>
-    <input type="text" id="accno" [(ngModel)]="acno" placeholder="account number" [value]="accno">
+        <h1>Customer Login</h1>
+        <label for="accno" id="label">Acc Number</label>
+        <input type="text" id="accno" formControlName="acno" placeholder="account number" >
 
-    <br>
-    <label for="password1" id="label">Password</label>
-    <input type="password" id="password1" [(ngModel)]="pwd" placeholder="password">
-   <button class="button btn btn-outline-warning" type="submit" (click)="login()">Login</button>
-    <br>
-<span>Not registered <a routerLink="register">register</a></span>
+        <br>
+        <label for="password1" id="label">Password</label>
+        <input type="password" id="password1" formControlName="pwd" placeholder="password">
+
+        <button class="button btn btn-outline-warning" type="submit" (click)="login()">Login</button>
+        <br>
+    </form>
+    <span>Not registered<a routerLink="register" class="btn btn-link">register</a></span>
+
 </div>
 
 
 
 
-<!--               String Interpolation         
+<!--              String Interpolation         
 <div class="Container1">
     <p><b>{{aim }}</b></p>    
 

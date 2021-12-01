@@ -46,3 +46,8 @@ input{
 span{
     margin-left: 65%;   
 }
+a{
+    margin-left: -2%;
+    margin-top: -1%;
+    text-decoration: none;
+}

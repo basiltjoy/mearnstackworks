@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataService } from '../Services/data.service';
 
@@ -16,29 +17,57 @@ export class DashboardComponent implements OnInit {
   pwd1 = ""
   amt1 = ""
 
-  constructor(private router: Router, private ds: DataService) { }
+  creditForm = this.fb.group({
+    accno: ['', [Validators.required, Validators.pattern('[0-9]*')]],
+    pwd: ['', [Validators.required]],
+    amt: ['', [Validators.required]]
+  })
+
+  debitForm = this.fb.group({
+    accno1: ['', [Validators.required,Validators.pattern('[0-9]*')]],
+    pwd1: ['', [Validators.required]],
+    amt1: ['', [Validators.required]]
+  })
+
+  constructor(private router: Router, private ds: DataService, private fb: FormBuilder) { }
 
   ngOnInit(): void {
   }
 
-  credit() {
-    var accno = this.accno
-    var pwd = this.pwd
-    var amt = this.amt
-    var result = this.ds.credit(accno, pwd, amt)
-    if (result) {
-      alert(amt+"rs  Credited successfully, Avail balance :"+ result)
+  user=this.ds.currentUser
 
+  credit() {
+    if (this.creditForm.get('')?.errors) { }
+    var accno = this.creditForm.value.accno
+    var pwd = this.creditForm.value.pwd
+    var amt = this.creditForm.value.amt
+    if (this.creditForm.valid) {
+      var result = this.ds.credit(accno, pwd, amt)
+      if (result) {
+        alert("Rs/-" + amt + " Credited successfully, Avail balance :" + result)
+        window.location.reload()
+      }
+    }
+    else {
+      alert("Invalid data Submitted")
+      window.location.reload()
     }
   }
 
   debit() {
-    var accno1 = this.accno1
-    var pwd1 = this.pwd1
-    var amt1 = this.amt1
-    var result = this.ds.debit(accno1, pwd1, amt1)
-    if(result){
-      alert(amt1+"rs  Debited successfully, Avail balance :"+ result)
+    var accno1 = this.debitForm.value.accno1
+    var pwd1 = this.debitForm.value.pwd1
+    var amt1 = this.debitForm.value.amt1
+    if (this.debitForm.valid) {
+      var result = this.ds.debit(accno1, pwd1, amt1)
+      if (result) {
+        alert("Rs/-" + amt1 + "  Debited successfully, Avail balance :" + result)
+        window.location.reload()
+      }
+    }
+    else {
+      alert("Invalid data Submission occured")
+      window.location.reload()
     }
   }
 
@@ -46,4 +75,7 @@ export class DashboardComponent implements OnInit {
     alert("Are you sure you want to exit")
     this.router.navigateByUrl('')
   }
+
+ 
+
 }

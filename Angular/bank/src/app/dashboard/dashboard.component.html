@@ -1,36 +1,72 @@
-
-
 <div class="container">
-    <nav class="navbar navbar-light bg-light navbar-expand-lg">
-        <div class="container-fluid">
-            <span class="navbar-text">
-                Let's start yout Banking
-            </span>
-            <button type="submit" class="btn btn-outline-info" (click)="logout()" id="logout">Logout</button>
-        </div>
-    </nav>
 
+    <form action="" (ngSubmit)="logout()">
+        <nav class="navbar navbar-light bg-light navbar-expand-lg">
+            <div class="container-fluid">
+                <span class="navbar-text">
+                    Let's start your Banking, {{user}}
+                </span>
+                <button type="submit" class="btn btn-outline-info" id="logout">Logout</button>
+            </div>
+            <div id="transactionH"><a routerLink="/payment">Transaction History</a></div>
+        </nav>
+    </form>
 
-
+  
 
     <div class="credit">
-        <div class="card">
-            <h1 style="color: #212002;">Credit Transactions</h1>
-            <input type="text" placeholder="Account number" [(ngModel)]="accno">
-            <input type="password" placeholder="password" [(ngModel)]="pwd">
-            <input type="text" placeholder="Amount" [(ngModel)]="amt">
-            <button type="submit" (click)="credit()" class="btn btn-outline-dark">Proceed</button>
-        </div>
+        <form action="" [formGroup]="creditForm">
+            <div class="card">
+                <h1 style="color: #212002;">Credit Transactions</h1>
+                <input type="text" placeholder="Account number" formControlName="accno">
+                <div *ngIf=" (this.creditForm.get('accno')?.touched || this.creditForm.get('accno')?.dirty)  && this.creditForm.get('accno')?.errors"
+                    id="errors">
+                    invalid entry
+                </div>
+
+                <input type="password" placeholder="password" formControlName="pwd">
+                <div *ngIf=" (this.creditForm.get('pwd')?.touched || this.creditForm.get('pwd')?.dirty)  && this.creditForm.get('pwd')?.errors"
+                    id="errors">
+                    invalid entry
+                </div>
+
+                <input type="text" placeholder="Amount" formControlName="amt">
+                <div *ngIf=" (this.creditForm.get('amt')?.touched || this.creditForm.get('amt')?.dirty)  && this.creditForm.get('amt')?.errors"
+                    id="errors">
+                    invalid entry
+                </div>
+                <button type="submit" (click)="credit()" class="btn btn-outline-dark">Proceed</button>
+            </div>
+        </form>
     </div>
 
+
+
     <div class="debit">
-        <div class="card card1">
-            <h1>Debit Transactions</h1>
-            <input type="text" placeholder="Account number" [(ngModel)]="accno1">
-            <input type="password" placeholder="password" [(ngModel)]="pwd1">
-            <input type="text" placeholder="Amount" [(ngModel)]="amt1">
-            <button type="submit" (click)="debit()" class="btn btn-outline-warning">Proceed</button>
-        </div>
+        <form action="" [formGroup]="debitForm">
+            <div class="card card1">
+                <h2>Debit Transactions</h2>
+                <input type="text" placeholder="Account number" formControlName="accno1">
+                <div *ngIf=" (this.debitForm.get('accno1')?.touched || this.debitForm.get('accno1')?.dirty)  && this.debitForm.get('accno1')?.errors"
+                    id="errors">
+                    <p>invalid entry</p>
+                </div>
+
+                <input type="password" placeholder="password" formControlName="pwd1">
+                <div *ngIf=" (this.debitForm.get('pwd1')?.touched || this.debitForm.get('pwd1')?.dirty)  && this.debitForm.get('pwd1')?.errors"
+                    id="errors">
+                    <p>invalid entry</p>
+                </div>
+
+                <input type="text" placeholder="Amount" formControlName="amt1">
+                <div *ngIf=" (this.debitForm.get('amt1')?.touched || this.debitForm.get('amt1')?.dirty)  && this.debitForm.get('amt1')?.errors"
+                    id="errors">
+                   <p>invalid entry</p>
+                </div>
+
+                <button type="submit" (click)="debit()" class="btn btn-outline-warning">Proceed</button>
+            </div>
+        </form>
     </div>
 
 </div>
