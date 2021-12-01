@@ -7,10 +7,12 @@
     </tr>
     <br>
   <tbody>
-      <tr >
-          <th></th>&nbsp;&nbsp;&nbsp;
-          <th></th>
+      <tr *ngFor="let trans of transaction">
+          <th>{{trans.amount}}</th>&nbsp;&nbsp;&nbsp;
+          <th>{{trans.type}}</th>
       </tr>
   </tbody>
+<a (click)='goback()' style="text-decoration:underline; color: rgb(15, 15, 15); font-weight: 900;">go back</a>
 </table>
+
 </div>

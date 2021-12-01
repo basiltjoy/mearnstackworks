@@ -9,7 +9,7 @@ else if (num % 3 == 0) {
   console.log("Buz");
 }   */
 
-var num=35;
+var num=5;
    var res=""
    if(num%3==0){
     res+="Fiz";

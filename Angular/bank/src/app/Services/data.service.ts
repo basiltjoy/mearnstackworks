@@ -107,8 +107,8 @@ export class DataService {
     if (accno1 in database) {
       if (pwd1 == database[accno1].password) {
         if (database[accno1].balance > amt1) {
-          database[accno1].balance = database[accno1].balance - amount;
-
+          database[accno1].balance = database[accno1].balance - amount;  
+          
           database[accno1]['transaction'].push({
             amount: amount,
             type: 'debit',
@@ -128,7 +128,9 @@ export class DataService {
       alert('Invalid Account number');
       window.location.reload();
     }
-  }
+  }   
+
+
 
   saveDetails() {
     if (this.data) {
