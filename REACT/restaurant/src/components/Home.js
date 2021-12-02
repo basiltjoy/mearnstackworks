@@ -1,4 +1,5 @@
 import React from "react";
+import './Home.css';
 import { useState } from "react";
 import { useEffect } from "react";
 import { Col } from "react-bootstrap";
@@ -54,7 +55,7 @@ function Home() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-      <h1>Welcome</h1>
+      <h1 className="welcome" style={{textDecoration: "none"}}>Welcome</h1>
 
 
 
