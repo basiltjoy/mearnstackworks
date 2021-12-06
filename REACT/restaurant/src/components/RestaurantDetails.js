@@ -26,7 +26,7 @@ function RestaurantDetails() {
         Back
       </Link>
       {details ? (
-        <Row className="my-2 mx-3">
+        <Row className="my-4 mx-3">
           <Col md={3}>
             <Image
               className="img"

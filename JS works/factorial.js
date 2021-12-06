@@ -1,4 +1,4 @@
-      var num = 10;
+var num = 10;
 var i = 1;
 var fact=1;
 while (i<=num) {

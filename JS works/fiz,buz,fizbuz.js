@@ -1,4 +1,4 @@
-/* var num = 3;
+/* var num = 30;
 if (num % 15 == 0) {
   console.log("Fizbuz");
 }

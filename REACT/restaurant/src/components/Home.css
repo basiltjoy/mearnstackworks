@@ -6,3 +6,18 @@
     text-align: center;
 }
 
+.caravan{
+color:orange;
+font-weight: bolder;
+text-align: center;
+margin-left:270%;
+font-size:40px
+}
+
+.carousel{
+margin-top:10%;
+}
+
+.con{
+    width:10%
+}

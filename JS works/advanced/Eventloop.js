@@ -4,7 +4,7 @@
 // Memory Heap                                 //then store it into call_back_queue
 //eventloop then execute it's function
 //if the function is not JS type it's
-//forwarded to WebAPI                          Web Api(functions)- DOM,Promise,SetTime(Out,In)
+//forwarded to WebAPI                          Web Api(functions)- DOM,Promise,SetTime(Out,In),fetch
 
 
 //eventloop=> Monitor whether call back is empty or not, and if stack is empty callbackqueue 

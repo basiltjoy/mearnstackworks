@@ -1,16 +1,21 @@
 img{
-    height: 180px;
-    width: 180px;
+    height: 300px;
+    margin-top:10px
 }
 
 .itemname{
-    color:blue;
+    color: white;
 
 }
 
 .neighborhood{
-    color: black;
+    color: yellow;
     font-size: 20px;
+    font-weight: bold;
     text-decoration: none;
 }
 
+
+.hotel{
+    margin-top:10px;
+}
