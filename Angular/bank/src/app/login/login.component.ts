@@ -75,7 +75,8 @@ export class LoginComponent implements OnInit {
 
 
 
-  /*   login(a:any,p:any) {       
+  /*  //Template Referencing Variable
+   login(a:any,p:any) {       
        console.log(a);
             
        var acno = a.value;

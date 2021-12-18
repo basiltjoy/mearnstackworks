@@ -4,15 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { UserComponent } from './user/user.component';
+import { FbJasonComponent } from './fb-jason/fb-jason.component';
+import { UserhomeComponent } from './userhome/userhome.component';
 import { RegisterComponent } from './register/register.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    UserComponent,
+    FbJasonComponent,
+    UserhomeComponent,
     RegisterComponent
   ],
   imports: [

@@ -1,9 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-    background-color: rgb(207, 218, 236);
-}
-
-img{
-    width: 80%;
-    height: 150px;
+html,body{
+    background-image: url(./assets/fb.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode:multiply;
+    height: 100%;
 }

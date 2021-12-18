@@ -1,0 +1,31 @@
+<div class="login">
+    <a class="navbar-brand" href="#">
+        <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg  " alt="" width="100" height="100">
+        <p class="text-wrap">Facebook helps you connect and share with the people in your life.</p>
+        <h4 class="text-wrap">{{aim }}</h4>
+        <br>
+        <h5 class="text-wrap">{{facebk }}</h5>
+
+    </a>
+
+
+
+    <br><br>
+ 
+    <div id="fb">
+     
+            <!---Event Binding($argument) :(change)="nameChange($event)""-->
+            <input type="text" name="" id="uname" [(ngModel)]="eventUsername" placeholder="User name">
+            <br>
+            <!---Event Binding($argument): (change)="pwdChange($event)" -->
+            <input type="password" name="" id="pwd" [(ngModel)]="eventpwd" placeholder="password">
+            <br>
+                                                           <!---Event Binding-->
+            <button class="button btn btn-outline-warning" (click)="logIn()">log In</button>
+            <div id="reg">
+                <p>not a user:<a href="register()"> register</a></p> 
+            </div>  
+    </div>
+
+
+</div>
